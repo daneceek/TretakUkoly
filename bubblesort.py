@@ -1,21 +1,14 @@
-from copy import deepcopy
 from generator import get_random_list
+from copy import deepcopy
 
-listikk = get_random_list(8) 
-def bubble_sort(list_):
-    print(list_)
-    result = deepcopy(list_)
-    for _ in range(list_[-1]):
-        print("k")
-        for value, index in enumerate(list_):
-            pass
-    
-    
-        # print(value)
-        # print(index)
+seznam = get_random_list(10, 0,50)
 
-        
-            
-    return result
+# def bubblesort_list(seznam):
+list_result = deepcopy(seznam)
+print(list_result) 
 
-bubble_sort(listikk)
+for _ in range(len(list_result) - 1):
+        for i in range(len(list_result) - 1):
+                if list_result[i] > list_result[i + 1]:
+                        list_result[i + 1], list_result[i] = list_result[i], list_result[i + 1]
+print(list_result)
