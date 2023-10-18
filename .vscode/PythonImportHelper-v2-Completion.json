@@ -1,0 +1,1323 @@
+[
+    {
+        "label": "random_number_generator",
+        "importPath": "generator",
+        "description": "generator",
+        "isExtraImport": true,
+        "detail": "generator",
+        "documentation": {}
+    },
+    {
+        "label": "random_number_generator",
+        "importPath": "generator",
+        "description": "generator",
+        "isExtraImport": true,
+        "detail": "generator",
+        "documentation": {}
+    },
+    {
+        "label": "deepcopy",
+        "importPath": "copy",
+        "description": "copy",
+        "isExtraImport": true,
+        "detail": "copy",
+        "documentation": {}
+    },
+    {
+        "label": "deepcopy",
+        "importPath": "copy",
+        "description": "copy",
+        "isExtraImport": true,
+        "detail": "copy",
+        "documentation": {}
+    },
+    {
+        "label": "list1",
+        "importPath": "excercise",
+        "description": "excercise",
+        "isExtraImport": true,
+        "detail": "excercise",
+        "documentation": {}
+    },
+    {
+        "label": "string",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "string",
+        "description": "string",
+        "detail": "string",
+        "documentation": {}
+    },
+    {
+        "label": "ascii_lowercase",
+        "importPath": "string",
+        "description": "string",
+        "isExtraImport": true,
+        "detail": "string",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "sleep",
+        "importPath": "time",
+        "description": "time",
+        "isExtraImport": true,
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "source_data",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "source_data",
+        "description": "source_data",
+        "detail": "source_data",
+        "documentation": {}
+    },
+    {
+        "label": "math",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "math",
+        "description": "math",
+        "detail": "math",
+        "documentation": {}
+    },
+    {
+        "label": "cislo",
+        "importPath": "kalkulačka",
+        "description": "kalkulačka",
+        "isExtraImport": true,
+        "detail": "kalkulačka",
+        "documentation": {}
+    },
+    {
+        "label": "Delete",
+        "importPath": "ast",
+        "description": "ast",
+        "isExtraImport": true,
+        "detail": "ast",
+        "documentation": {}
+    },
+    {
+        "label": "Turtle",
+        "importPath": "turtle",
+        "description": "turtle",
+        "isExtraImport": true,
+        "detail": "turtle",
+        "documentation": {}
+    },
+    {
+        "label": "Screen",
+        "importPath": "turtle",
+        "description": "turtle",
+        "isExtraImport": true,
+        "detail": "turtle",
+        "documentation": {}
+    },
+    {
+        "label": "list",
+        "kind": 5,
+        "importPath": "BMI",
+        "description": "BMI",
+        "peekOfCode": "list = []\nfor i in range(101):\n    if (i == 2) or (i == 3) or (i == 5):\n        list.append(i)\n    if (i % 2 > 0) and (i % 3 > 0) and (i % 5 > 0):\n        list.append(i)\nprint(list)",
+        "detail": "BMI",
+        "documentation": {}
+    },
+    {
+        "label": "seznam",
+        "kind": 5,
+        "importPath": "bubblesorting",
+        "description": "bubblesorting",
+        "peekOfCode": "seznam = random_number_generator(10, 0,50)\n# def bubblesort_list(seznam):\nlist_result = deepcopy(seznam)\nprint(list_result) \nfor _ in range(len(list_result) - 1):\n        for i in range(len(list_result) - 1):\n                if list_result[i] > list_result[i + 1]:\n                        list_result[i + 1], list_result[i] = list_result[i], list_result[i + 1]\nprint(list_result)",
+        "detail": "bubblesorting",
+        "documentation": {}
+    },
+    {
+        "label": "list_result",
+        "kind": 5,
+        "importPath": "bubblesorting",
+        "description": "bubblesorting",
+        "peekOfCode": "list_result = deepcopy(seznam)\nprint(list_result) \nfor _ in range(len(list_result) - 1):\n        for i in range(len(list_result) - 1):\n                if list_result[i] > list_result[i + 1]:\n                        list_result[i + 1], list_result[i] = list_result[i], list_result[i + 1]\nprint(list_result)",
+        "detail": "bubblesorting",
+        "documentation": {}
+    },
+    {
+        "label": "Škola",
+        "kind": 6,
+        "importPath": "classy",
+        "description": "classy",
+        "peekOfCode": "class Škola:\n    #constructor\n    def __init__(self, na_co_je_skola, proc_do_ni_chodime):\n        self.pica = na_co_je_skola \n        self.mrdat = proc_do_ni_chodime\n    #     self.ukony_do_opravy = 1000\n    # def krok_vpred(self):\n    #     print(\"Robot udělal krok vpřed\")\n    #     self.ukony_do_opravy -= 1\n    #     print(f\"Úkony do kontroly: {self.ukony_do_opravy}\")",
+        "detail": "classy",
+        "documentation": {}
+    },
+    {
+        "label": "kreten",
+        "kind": 5,
+        "importPath": "classy",
+        "description": "classy",
+        "peekOfCode": "kreten = Škola(\"na piču\", \"děkuji za pozornost\")\nprint(\"definice školy:\")\nprint(kreten.pica)\nprint(kreten.mrdat)\n#objekty podle classy\n# robot_1 = Robot(24,0.6)\n# robot_2 = Robot(48, 0.5)\n# robot_1.krok_vpred()\n# robot_1.krok_vzad()\n# print(robot_1.ukony_do_opravy)",
+        "detail": "classy",
+        "documentation": {}
+    },
+    {
+        "label": "veta",
+        "kind": 5,
+        "importPath": "count",
+        "description": "count",
+        "peekOfCode": "veta = input(\"Zadejte větu: \")\nletters = dict()\ncharacter_count = 0\nfor i in ascii_lowercase:\n    letters[i] = 0\nfor character in veta:\n    if character not in letters.keys():\n        letters[character] = 1\n    else:\n        letters[character] += 1",
+        "detail": "count",
+        "documentation": {}
+    },
+    {
+        "label": "letters",
+        "kind": 5,
+        "importPath": "count",
+        "description": "count",
+        "peekOfCode": "letters = dict()\ncharacter_count = 0\nfor i in ascii_lowercase:\n    letters[i] = 0\nfor character in veta:\n    if character not in letters.keys():\n        letters[character] = 1\n    else:\n        letters[character] += 1\n    character_count += 1",
+        "detail": "count",
+        "documentation": {}
+    },
+    {
+        "label": "character_count",
+        "kind": 5,
+        "importPath": "count",
+        "description": "count",
+        "peekOfCode": "character_count = 0\nfor i in ascii_lowercase:\n    letters[i] = 0\nfor character in veta:\n    if character not in letters.keys():\n        letters[character] = 1\n    else:\n        letters[character] += 1\n    character_count += 1\nfor key, value in letters.items():",
+        "detail": "count",
+        "documentation": {}
+    },
+    {
+        "label": "stastna_cisla",
+        "kind": 5,
+        "importPath": "cyklus for",
+        "description": "cyklus for",
+        "peekOfCode": "stastna_cisla = [3,4,5,8,1,12,41,32]\nfriends = [\"Petr\", \"Pavel\", \"Tom\", \"Katka\", \"Klára\", \"Jiří\", \"Zdeněk\"]\n#friends.append(\"Lukáš\")\n#friends.extend(stastna_cisla)\n# friends.insert(1, \"Marcel\") #dá marcela na druhe misto v seznamu\n#friends.remove(friends[1])\n#del friends[0:3]\n#friends.clear()\n#friends.pop() #defaultně odstraní posledni vec [-1]\n#print(friends.count(\"e\")) #pocita ",
+        "detail": "cyklus for",
+        "documentation": {}
+    },
+    {
+        "label": "friends",
+        "kind": 5,
+        "importPath": "cyklus for",
+        "description": "cyklus for",
+        "peekOfCode": "friends = [\"Petr\", \"Pavel\", \"Tom\", \"Katka\", \"Klára\", \"Jiří\", \"Zdeněk\"]\n#friends.append(\"Lukáš\")\n#friends.extend(stastna_cisla)\n# friends.insert(1, \"Marcel\") #dá marcela na druhe misto v seznamu\n#friends.remove(friends[1])\n#del friends[0:3]\n#friends.clear()\n#friends.pop() #defaultně odstraní posledni vec [-1]\n#print(friends.count(\"e\")) #pocita \n#friends.sort() #abecedni poradi i s cisly ",
+        "detail": "cyklus for",
+        "documentation": {}
+    },
+    {
+        "label": "pridavani",
+        "kind": 2,
+        "importPath": "davidkovi uwu",
+        "description": "davidkovi uwu",
+        "peekOfCode": "def pridavani():\n    validni_cislo = validni_jmeno = 0\n    while validni_jmeno == 0:\n        validni_jmeno = 1\n        jmeno = input(\"Vyber jmeno: \").strip()\n        if jmeno == \"\":\n            print(\"Je nutno zadat nějaký údaj!\")\n            validni_jmeno = 0\n    while validni_cislo == 0:\n        validni_cislo = 1",
+        "detail": "davidkovi uwu",
+        "documentation": {}
+    },
+    {
+        "label": "tuple_vybiracek",
+        "kind": 5,
+        "importPath": "davidkovi uwu",
+        "description": "davidkovi uwu",
+        "peekOfCode": "tuple_vybiracek = (\"1\", \"2\", \"3\")\nvalidni_cislo = validni_jmeno = 0\nkontakty = {}\ndef pridavani():\n    validni_cislo = validni_jmeno = 0\n    while validni_jmeno == 0:\n        validni_jmeno = 1\n        jmeno = input(\"Vyber jmeno: \").strip()\n        if jmeno == \"\":\n            print(\"Je nutno zadat nějaký údaj!\")",
+        "detail": "davidkovi uwu",
+        "documentation": {}
+    },
+    {
+        "label": "validni_cislo",
+        "kind": 5,
+        "importPath": "davidkovi uwu",
+        "description": "davidkovi uwu",
+        "peekOfCode": "validni_cislo = validni_jmeno = 0\nkontakty = {}\ndef pridavani():\n    validni_cislo = validni_jmeno = 0\n    while validni_jmeno == 0:\n        validni_jmeno = 1\n        jmeno = input(\"Vyber jmeno: \").strip()\n        if jmeno == \"\":\n            print(\"Je nutno zadat nějaký údaj!\")\n            validni_jmeno = 0",
+        "detail": "davidkovi uwu",
+        "documentation": {}
+    },
+    {
+        "label": "kontakty",
+        "kind": 5,
+        "importPath": "davidkovi uwu",
+        "description": "davidkovi uwu",
+        "peekOfCode": "kontakty = {}\ndef pridavani():\n    validni_cislo = validni_jmeno = 0\n    while validni_jmeno == 0:\n        validni_jmeno = 1\n        jmeno = input(\"Vyber jmeno: \").strip()\n        if jmeno == \"\":\n            print(\"Je nutno zadat nějaký údaj!\")\n            validni_jmeno = 0\n    while validni_cislo == 0:",
+        "detail": "davidkovi uwu",
+        "documentation": {}
+    },
+    {
+        "label": "player_stats",
+        "kind": 5,
+        "importPath": "dragon1",
+        "description": "dragon1",
+        "peekOfCode": "player_stats = (20, 8, 4)\ndragon_stats = (30, 6, 2)\ndragon_attack = 1\nprint(\"Welcome to Dragon Slayer!\")\nsleep(1)\nprint(\"You are about to face a mighty dragon in a battle to the death.\")\nsleep(1)\nprint(\"\\nyour stats:\")\nprint(\"-------------\")\nprint(f\"lives: {player_stats[0]}\\ndamage: {player_stats[1]}\\ndefense: {player_stats[2]}\")",
+        "detail": "dragon1",
+        "documentation": {}
+    },
+    {
+        "label": "dragon_stats",
+        "kind": 5,
+        "importPath": "dragon1",
+        "description": "dragon1",
+        "peekOfCode": "dragon_stats = (30, 6, 2)\ndragon_attack = 1\nprint(\"Welcome to Dragon Slayer!\")\nsleep(1)\nprint(\"You are about to face a mighty dragon in a battle to the death.\")\nsleep(1)\nprint(\"\\nyour stats:\")\nprint(\"-------------\")\nprint(f\"lives: {player_stats[0]}\\ndamage: {player_stats[1]}\\ndefense: {player_stats[2]}\")\nprint(\"-------------\")",
+        "detail": "dragon1",
+        "documentation": {}
+    },
+    {
+        "label": "dragon_attack",
+        "kind": 5,
+        "importPath": "dragon1",
+        "description": "dragon1",
+        "peekOfCode": "dragon_attack = 1\nprint(\"Welcome to Dragon Slayer!\")\nsleep(1)\nprint(\"You are about to face a mighty dragon in a battle to the death.\")\nsleep(1)\nprint(\"\\nyour stats:\")\nprint(\"-------------\")\nprint(f\"lives: {player_stats[0]}\\ndamage: {player_stats[1]}\\ndefense: {player_stats[2]}\")\nprint(\"-------------\")\nsleep(1)",
+        "detail": "dragon1",
+        "documentation": {}
+    },
+    {
+        "label": "dragon_slayer",
+        "kind": 2,
+        "importPath": "dragon2",
+        "description": "dragon2",
+        "peekOfCode": "def dragon_slayer(dragon_stats, player_stats):\n    difficulty = input(\"WELCOME TO DRAGONSLAYER, CHOOSE YOUR DIFFICULTY :\\nEASY - 1\\nMEDIUM - 2\\nHARD - 3\\n\")\n    if difficulty == \"1\":\n        dragon_health = dragon_stats[\"health\"] - 20\n        dragon_attack = dragon_stats[\"attack\"] - 1\n        dragon_defense = dragon_stats[\"defense\"] - 1\n        player_health = player_stats[0]\n        player_attack = player_stats[1]\n        player_defense = player_stats[2]\n    elif difficulty == \"2\":",
+        "detail": "dragon2",
+        "documentation": {}
+    },
+    {
+        "label": "dragon_stats",
+        "kind": 5,
+        "importPath": "dragon2",
+        "description": "dragon2",
+        "peekOfCode": "dragon_stats = {\n    \"health\": 100\n    ,\n    \"attack\": 9,\n    \"defense\": 3}\nplayer_stats = (70, 12, 5)\ndragon_slayer(dragon_stats, player_stats)",
+        "detail": "dragon2",
+        "documentation": {}
+    },
+    {
+        "label": "player_stats",
+        "kind": 5,
+        "importPath": "dragon2",
+        "description": "dragon2",
+        "peekOfCode": "player_stats = (70, 12, 5)\ndragon_slayer(dragon_stats, player_stats)",
+        "detail": "dragon2",
+        "documentation": {}
+    },
+    {
+        "label": "list1",
+        "kind": 5,
+        "importPath": "excercise",
+        "description": "excercise",
+        "peekOfCode": "list1 = [\"a\", \"b\", [\"c\", [\"d\", \"e\", [\"f\", \"g\"], \"k\"], \"l\"], \"m\", \"n\"]\n# sub list to add\nsub_list = [\"h\", \"i\", \"j\"]\nfor letter in sub_list:\n    list1[2][1][2].append(letter)\nprint(list1)\nlist2 = [5, 10, 15, 20, 25, 50, 20]\nfor index, i  in enumerate(list2):\n        if i == 20:\n            list2[index] = 200",
+        "detail": "excercise",
+        "documentation": {}
+    },
+    {
+        "label": "sub_list",
+        "kind": 5,
+        "importPath": "excercise",
+        "description": "excercise",
+        "peekOfCode": "sub_list = [\"h\", \"i\", \"j\"]\nfor letter in sub_list:\n    list1[2][1][2].append(letter)\nprint(list1)\nlist2 = [5, 10, 15, 20, 25, 50, 20]\nfor index, i  in enumerate(list2):\n        if i == 20:\n            list2[index] = 200\n            break\nprint(list2)",
+        "detail": "excercise",
+        "documentation": {}
+    },
+    {
+        "label": "list2",
+        "kind": 5,
+        "importPath": "excercise",
+        "description": "excercise",
+        "peekOfCode": "list2 = [5, 10, 15, 20, 25, 50, 20]\nfor index, i  in enumerate(list2):\n        if i == 20:\n            list2[index] = 200\n            break\nprint(list2)",
+        "detail": "excercise",
+        "documentation": {}
+    },
+    {
+        "label": "list_",
+        "kind": 5,
+        "importPath": "excercise_",
+        "description": "excercise_",
+        "peekOfCode": "list_ = [0,1,2,3,4,8]\nlist__ = deepcopy(list_)\nlist__[2] = 8\nprint(list_)",
+        "detail": "excercise_",
+        "documentation": {}
+    },
+    {
+        "label": "list__",
+        "kind": 5,
+        "importPath": "excercise_",
+        "description": "excercise_",
+        "peekOfCode": "list__ = deepcopy(list_)\nlist__[2] = 8\nprint(list_)",
+        "detail": "excercise_",
+        "documentation": {}
+    },
+    {
+        "label": "list__[2]",
+        "kind": 5,
+        "importPath": "excercise_",
+        "description": "excercise_",
+        "peekOfCode": "list__[2] = 8\nprint(list_)",
+        "detail": "excercise_",
+        "documentation": {}
+    },
+    {
+        "label": "random_number_generator",
+        "kind": 2,
+        "importPath": "generator",
+        "description": "generator",
+        "peekOfCode": "def random_number_generator(count, min, max):\n    result = []\n    for _ in range(count):\n        result.append(random.randint(min, max))\n    return result",
+        "detail": "generator",
+        "documentation": {}
+    },
+    {
+        "label": "cykl",
+        "kind": 5,
+        "importPath": "hra_kročil",
+        "description": "hra_kročil",
+        "peekOfCode": "cykl = True\nklic = False\ncyklus_mov = 0\nwhile cykl == True:\n    sleep(1)\n    vchod = input(\"Zahaj hru vkročením do vchodových dveří : (D)\\n\")\n    if vchod == \"D\":\n        sleep(1)\n        print(\"Vstoupil jsi do hlavních dveří domu... Teď se musíš ovšem rozhodnout, kudy se vydat.\")\n        while cyklus_mov < 1:",
+        "detail": "hra_kročil",
+        "documentation": {}
+    },
+    {
+        "label": "klic",
+        "kind": 5,
+        "importPath": "hra_kročil",
+        "description": "hra_kročil",
+        "peekOfCode": "klic = False\ncyklus_mov = 0\nwhile cykl == True:\n    sleep(1)\n    vchod = input(\"Zahaj hru vkročením do vchodových dveří : (D)\\n\")\n    if vchod == \"D\":\n        sleep(1)\n        print(\"Vstoupil jsi do hlavních dveří domu... Teď se musíš ovšem rozhodnout, kudy se vydat.\")\n        while cyklus_mov < 1:\n            sleep(2)",
+        "detail": "hra_kročil",
+        "documentation": {}
+    },
+    {
+        "label": "cyklus_mov",
+        "kind": 5,
+        "importPath": "hra_kročil",
+        "description": "hra_kročil",
+        "peekOfCode": "cyklus_mov = 0\nwhile cykl == True:\n    sleep(1)\n    vchod = input(\"Zahaj hru vkročením do vchodových dveří : (D)\\n\")\n    if vchod == \"D\":\n        sleep(1)\n        print(\"Vstoupil jsi do hlavních dveří domu... Teď se musíš ovšem rozhodnout, kudy se vydat.\")\n        while cyklus_mov < 1:\n            sleep(2)\n            movement = input(\"Tak, kam půjdeš? (W) (A) (S) (D)\\n\")",
+        "detail": "hra_kročil",
+        "documentation": {}
+    },
+    {
+        "label": "cislo",
+        "kind": 5,
+        "importPath": "kalkulačka",
+        "description": "kalkulačka",
+        "peekOfCode": "cislo = random.randrange(0, 100, 5)\nprint(cislo)",
+        "detail": "kalkulačka",
+        "documentation": {}
+    },
+    {
+        "label": "x",
+        "kind": 5,
+        "importPath": "kamennuzky",
+        "description": "kamennuzky",
+        "peekOfCode": "x = input(\"kamen, nuzky nebo papir?\\n\")\ny = random.choice([\"kamen\", \"nuzky\", \"papir\"])\nprint(f\"Soupeř : {y}\")\nif y == x :\n    print(\"remiza\")\nelif x == \"kamen\" and y == \"nuzky\":\n    print(\"Vyhra\")\nelif x == \"nuzky\" and y == \"papir\":\n    print(\"Vyhra\")\nelif x == \"papir\" and y == \"kamen\":",
+        "detail": "kamennuzky",
+        "documentation": {}
+    },
+    {
+        "label": "y",
+        "kind": 5,
+        "importPath": "kamennuzky",
+        "description": "kamennuzky",
+        "peekOfCode": "y = random.choice([\"kamen\", \"nuzky\", \"papir\"])\nprint(f\"Soupeř : {y}\")\nif y == x :\n    print(\"remiza\")\nelif x == \"kamen\" and y == \"nuzky\":\n    print(\"Vyhra\")\nelif x == \"nuzky\" and y == \"papir\":\n    print(\"Vyhra\")\nelif x == \"papir\" and y == \"kamen\":\n    print(\"Vyhra\")",
+        "detail": "kamennuzky",
+        "documentation": {}
+    },
+    {
+        "label": "vhazovac_minci",
+        "kind": 2,
+        "importPath": "kavovar",
+        "description": "kavovar",
+        "peekOfCode": "def vhazovac_minci():\n    cost = kolik_stoji(choice)\n    for value in resources.values():\n        if value <= 0:\n            print(\"Na váš nápoj nemáme dostatek ingrediencí.\")\n            exit()\n    celkove_vlozeno = 0\n    def zaplaceno(celkove_vlozeno):\n        mince = [1, 2, 5, 10, 20, 50]\n        print(f\"Cena vybraného nápoje je {cost} Kč.\")",
+        "detail": "kavovar",
+        "documentation": {}
+    },
+    {
+        "label": "kavovar",
+        "kind": 2,
+        "importPath": "kavovar",
+        "description": "kavovar",
+        "peekOfCode": "def kavovar(resources, MENU):\n    global choice\n    choice = input(\"Co byste si dal? (espresso, latte, cappuccino): \")\n    if choice == \"report\":\n        for resource, howmuch in resources.items():\n            print(resource, \":\", howmuch) \n        kavovar(resources, MENU)\n    elif choice == \"espresso\":\n        resources[\"water\"] -= MENU[\"espresso\"][\"ingredients\"][\"water\"]\n        resources[\"milk\"] -= MENU[\"espresso\"][\"ingredients\"][\"milk\"]",
+        "detail": "kavovar",
+        "documentation": {}
+    },
+    {
+        "label": "kolik_stoji",
+        "kind": 2,
+        "importPath": "kavovar",
+        "description": "kavovar",
+        "peekOfCode": "def kolik_stoji(choice):\n    cost = MENU[choice][\"cost\"]\n    return cost\nkavovar(resources, MENU)",
+        "detail": "kavovar",
+        "documentation": {}
+    },
+    {
+        "label": "MENU",
+        "kind": 5,
+        "importPath": "kavovar",
+        "description": "kavovar",
+        "peekOfCode": "MENU = {\n    \"espresso\": {\n        \"ingredients\": {\n            \"water\": 50,\n            \"milk\": 0,\n            \"coffee\": 18,\n        },\n        \"cost\": 40,\n    },\n    \"latte\": {",
+        "detail": "kavovar",
+        "documentation": {}
+    },
+    {
+        "label": "resources",
+        "kind": 5,
+        "importPath": "kavovar",
+        "description": "kavovar",
+        "peekOfCode": "resources = {\n    \"water\": 400,\n    \"milk\": 300,\n    \"coffee\": 150,\n}\n##########################################################################################x\ndef vhazovac_minci():\n    cost = kolik_stoji(choice)\n    for value in resources.values():\n        if value <= 0:",
+        "detail": "kavovar",
+        "documentation": {}
+    },
+    {
+        "label": "a",
+        "kind": 5,
+        "importPath": "kv.rovnice",
+        "description": "kv.rovnice",
+        "peekOfCode": "a = int(input(\"Zadejte číslo 'a' \"))\nb = int(input(\"Zadejte číslo 'b' \"))\nc = int(input(\"Zadejte číslo 'c'\"))\nvypocet1 = -b +  m.sqrt(m.pow(b,2) - 4 *a *c)\nvypocet1 = -b -  m.sqrt(m.pow(b,2) - 4 *a *c)\nvypocet = vypocet1 / 2 *1/a\nvypocet2 = vypocet1 / 2 *1/a\nprint(f\"Kořeny jsou {vypocet} a {vypocet2}\")",
+        "detail": "kv.rovnice",
+        "documentation": {}
+    },
+    {
+        "label": "b",
+        "kind": 5,
+        "importPath": "kv.rovnice",
+        "description": "kv.rovnice",
+        "peekOfCode": "b = int(input(\"Zadejte číslo 'b' \"))\nc = int(input(\"Zadejte číslo 'c'\"))\nvypocet1 = -b +  m.sqrt(m.pow(b,2) - 4 *a *c)\nvypocet1 = -b -  m.sqrt(m.pow(b,2) - 4 *a *c)\nvypocet = vypocet1 / 2 *1/a\nvypocet2 = vypocet1 / 2 *1/a\nprint(f\"Kořeny jsou {vypocet} a {vypocet2}\")",
+        "detail": "kv.rovnice",
+        "documentation": {}
+    },
+    {
+        "label": "c",
+        "kind": 5,
+        "importPath": "kv.rovnice",
+        "description": "kv.rovnice",
+        "peekOfCode": "c = int(input(\"Zadejte číslo 'c'\"))\nvypocet1 = -b +  m.sqrt(m.pow(b,2) - 4 *a *c)\nvypocet1 = -b -  m.sqrt(m.pow(b,2) - 4 *a *c)\nvypocet = vypocet1 / 2 *1/a\nvypocet2 = vypocet1 / 2 *1/a\nprint(f\"Kořeny jsou {vypocet} a {vypocet2}\")",
+        "detail": "kv.rovnice",
+        "documentation": {}
+    },
+    {
+        "label": "vypocet1",
+        "kind": 5,
+        "importPath": "kv.rovnice",
+        "description": "kv.rovnice",
+        "peekOfCode": "vypocet1 = -b +  m.sqrt(m.pow(b,2) - 4 *a *c)\nvypocet1 = -b -  m.sqrt(m.pow(b,2) - 4 *a *c)\nvypocet = vypocet1 / 2 *1/a\nvypocet2 = vypocet1 / 2 *1/a\nprint(f\"Kořeny jsou {vypocet} a {vypocet2}\")",
+        "detail": "kv.rovnice",
+        "documentation": {}
+    },
+    {
+        "label": "vypocet1",
+        "kind": 5,
+        "importPath": "kv.rovnice",
+        "description": "kv.rovnice",
+        "peekOfCode": "vypocet1 = -b -  m.sqrt(m.pow(b,2) - 4 *a *c)\nvypocet = vypocet1 / 2 *1/a\nvypocet2 = vypocet1 / 2 *1/a\nprint(f\"Kořeny jsou {vypocet} a {vypocet2}\")",
+        "detail": "kv.rovnice",
+        "documentation": {}
+    },
+    {
+        "label": "vypocet",
+        "kind": 5,
+        "importPath": "kv.rovnice",
+        "description": "kv.rovnice",
+        "peekOfCode": "vypocet = vypocet1 / 2 *1/a\nvypocet2 = vypocet1 / 2 *1/a\nprint(f\"Kořeny jsou {vypocet} a {vypocet2}\")",
+        "detail": "kv.rovnice",
+        "documentation": {}
+    },
+    {
+        "label": "vypocet2",
+        "kind": 5,
+        "importPath": "kv.rovnice",
+        "description": "kv.rovnice",
+        "peekOfCode": "vypocet2 = vypocet1 / 2 *1/a\nprint(f\"Kořeny jsou {vypocet} a {vypocet2}\")",
+        "detail": "kv.rovnice",
+        "documentation": {}
+    },
+    {
+        "label": "QuizBrain",
+        "kind": 6,
+        "importPath": "kviz",
+        "description": "kviz",
+        "peekOfCode": "class QuizBrain:\n    def __init__(self, q_list, a_list):\n        self.score = 0\n        self.question_number = 0\n        self.question_li = q_list\n        self.answer_li = a_list\n    def next_question(self):\n        current_question = self.question_li[self.question_number]\n        current_answer = self.answer_li[self.question_number]\n        self.question_number+=1",
+        "detail": "kviz",
+        "documentation": {}
+    },
+    {
+        "label": "question_data",
+        "kind": 5,
+        "importPath": "kviz",
+        "description": "kviz",
+        "peekOfCode": "question_data = [\n    {\"text\": \"Operační systém Linux byl založen Linusem Torvaldem\", \"answer\": \"True\"},\n    {\"text\": \"HTML jazyk je také nazýván značkovacím jazykem\", \"answer\": \"True\"},\n    {\"text\": \"JavaScript patří mezi frontendové jazyky\", \"answer\": \"True\"},\n    {\"text\": \"Je Slunce největší planetou ve sluneční soustavě?\", \"answer\": \"False\"},\n    {\"text\": \"Byla první lidská mise na Měsíc úspěšná?\", \"answer\": \"True\"},\n    {\"text\": \"Byl Mozart slavným německým hudebním skladatelem?\", \"answer\": \"False\"},\n    {\"text\": \"Byl Apple založen Stevem Jobsem?\", \"answer\": \"True\"},\n    {\"text\": \"Je voda na Zemi nejhojnější chemickou sloučeninou?\", \"answer\": \"True\"},\n]",
+        "detail": "kviz",
+        "documentation": {}
+    },
+    {
+        "label": "question_list",
+        "kind": 5,
+        "importPath": "kviz",
+        "description": "kviz",
+        "peekOfCode": "question_list = []\nanswer_list = []\nfor one_question in question_data:\n    question_t = one_question[\"text\"]\n    question_a = one_question[\"answer\"]\n    question_list.append(question_t)\n    answer_list.append(question_a)\nquiz = QuizBrain(question_list, answer_list)\nwhile quiz.has_question() == True:\n    quiz.next_question()",
+        "detail": "kviz",
+        "documentation": {}
+    },
+    {
+        "label": "answer_list",
+        "kind": 5,
+        "importPath": "kviz",
+        "description": "kviz",
+        "peekOfCode": "answer_list = []\nfor one_question in question_data:\n    question_t = one_question[\"text\"]\n    question_a = one_question[\"answer\"]\n    question_list.append(question_t)\n    answer_list.append(question_a)\nquiz = QuizBrain(question_list, answer_list)\nwhile quiz.has_question() == True:\n    quiz.next_question()",
+        "detail": "kviz",
+        "documentation": {}
+    },
+    {
+        "label": "quiz",
+        "kind": 5,
+        "importPath": "kviz",
+        "description": "kviz",
+        "peekOfCode": "quiz = QuizBrain(question_list, answer_list)\nwhile quiz.has_question() == True:\n    quiz.next_question()",
+        "detail": "kviz",
+        "documentation": {}
+    },
+    {
+        "label": "k",
+        "kind": 5,
+        "importPath": "kys",
+        "description": "kys",
+        "peekOfCode": "k = \"kys\"",
+        "detail": "kys",
+        "documentation": {}
+    },
+    {
+        "label": "k",
+        "kind": 5,
+        "importPath": "l",
+        "description": "l",
+        "peekOfCode": "k = \"kys\"\nprint(k)",
+        "detail": "l",
+        "documentation": {}
+    },
+    {
+        "label": "seznam",
+        "kind": 5,
+        "importPath": "mazani_nul",
+        "description": "mazani_nul",
+        "peekOfCode": "seznam = random_number_generator(20, 0,4)\nprint(seznam) \nnula = 0\nfor index, cislo in enumerate(seznam):\n    if cislo == 0:\n        nula += 1\n        if nula > 1:\n            nula = 0\n        if nula == 0:\n            seznam.pop(index)",
+        "detail": "mazani_nul",
+        "documentation": {}
+    },
+    {
+        "label": "nula",
+        "kind": 5,
+        "importPath": "mazani_nul",
+        "description": "mazani_nul",
+        "peekOfCode": "nula = 0\nfor index, cislo in enumerate(seznam):\n    if cislo == 0:\n        nula += 1\n        if nula > 1:\n            nula = 0\n        if nula == 0:\n            seznam.pop(index)\nprint(seznam)",
+        "detail": "mazani_nul",
+        "documentation": {}
+    },
+    {
+        "label": "list",
+        "kind": 5,
+        "importPath": "mince",
+        "description": "mince",
+        "peekOfCode": "list = []\nfor i in range(0, 101):\n    list.append(i)\nfor cislo in list:\n    if cislo % 3 == 0 and cislo % 5 == 0:\n        print(\"Fizz Buzz\")\n    elif cislo % 3 == 0:\n        print(\"Fizz\")\n    elif cislo % 5 == 0:\n        print(\"Buzz\")",
+        "detail": "mince",
+        "documentation": {}
+    },
+    {
+        "label": "Car",
+        "kind": 6,
+        "importPath": "oooop",
+        "description": "oooop",
+        "peekOfCode": "class Car:\n    #konstruktor\n    def __init__(self, color, doors, brand):\n        self.color = color\n        self.doors = doors\n        self.brand = brand \n        self.distance = 0\n    def turn_left(self):\n        return f\"Auto značky {self.brand} zatočilo doleva.\"\n    def turn_right(self):",
+        "detail": "oooop",
+        "documentation": {}
+    },
+    {
+        "label": "VipCar",
+        "kind": 6,
+        "importPath": "oooop",
+        "description": "oooop",
+        "peekOfCode": "class VipCar(Car):\n    def __init__(self, color, doors, brand, password):\n        super().__init__(color, doors, brand)\n        self.password = password\n        self.software_control = True\n    def go_straight(self):\n        self.distance += 25\n        return f\"Auto popojelo o 25 metrů\"\n    def password_try(self, password_guess):\n        if self.password == password_guess:",
+        "detail": "oooop",
+        "documentation": {}
+    },
+    {
+        "label": "car_1",
+        "kind": 5,
+        "importPath": "oooop",
+        "description": "oooop",
+        "peekOfCode": "car_1 = Car(\"red\", 4, \"BMW\")\ncar_2 = Car(\"blue\", 2, \"Porsche\")\ncar_3 = Car(\"yellow\", 4, \"Skoda\")\nprint(car_1.owner(\"David\"))\nprint(car_2.owner(\"Hermiona\"))\n# print(car_3.color)\n# car_1.turn_left()\n# car_2.turn_right()\n# car_1.go_straight()\n# car_2.go_straight()",
+        "detail": "oooop",
+        "documentation": {}
+    },
+    {
+        "label": "car_2",
+        "kind": 5,
+        "importPath": "oooop",
+        "description": "oooop",
+        "peekOfCode": "car_2 = Car(\"blue\", 2, \"Porsche\")\ncar_3 = Car(\"yellow\", 4, \"Skoda\")\nprint(car_1.owner(\"David\"))\nprint(car_2.owner(\"Hermiona\"))\n# print(car_3.color)\n# car_1.turn_left()\n# car_2.turn_right()\n# car_1.go_straight()\n# car_2.go_straight()\n# car_3.turn_left()",
+        "detail": "oooop",
+        "documentation": {}
+    },
+    {
+        "label": "car_3",
+        "kind": 5,
+        "importPath": "oooop",
+        "description": "oooop",
+        "peekOfCode": "car_3 = Car(\"yellow\", 4, \"Skoda\")\nprint(car_1.owner(\"David\"))\nprint(car_2.owner(\"Hermiona\"))\n# print(car_3.color)\n# car_1.turn_left()\n# car_2.turn_right()\n# car_1.go_straight()\n# car_2.go_straight()\n# car_3.turn_left()\n# print(car_2.distance_driven())",
+        "detail": "oooop",
+        "documentation": {}
+    },
+    {
+        "label": "vip_car1",
+        "kind": 5,
+        "importPath": "oooop",
+        "description": "oooop",
+        "peekOfCode": "vip_car1 = VipCar(\"blue\", 4, \"Mercedes\", \"ok\")\nprint(vip_car1.password_try(\"ok\"))\nprint(vip_car1.software_control)\nvip_car1.turn_on_off_software_control()\nprint(vip_car1.software_control)\nvip_car1.turn_on_off_software_control()\nprint(vip_car1.software_control)\nprint(vip_car1.go_straight())",
+        "detail": "oooop",
+        "documentation": {}
+    },
+    {
+        "label": "WizardPlayer",
+        "kind": 6,
+        "importPath": "oooop2",
+        "description": "oooop2",
+        "peekOfCode": "class WizardPlayer:\n    wizard_club = True\n    def __init__(self, name=\"anonym\", age = 0):\n        self._name = name\n        self.age = age\n    def attack(self):\n        print(\"Útok\")\n    def age_checker(self):\n        if self.age >= 18:\n            print(\"Můžete hrát\")",
+        "detail": "oooop2",
+        "documentation": {}
+    },
+    {
+        "label": "HeadWizard",
+        "kind": 6,
+        "importPath": "oooop2",
+        "description": "oooop2",
+        "peekOfCode": "class HeadWizard(WizardPlayer):\n    def __init__(self, type, name, age):\n        super().__init__(name, age)\n        self.type = type\n    def avada_kedabra(self):\n        print(\"Avada kedabra\")\n    def attack(self):\n        print(\"Útok druhého stupně\") \nplayer1 = WizardPlayer(\"david\", 25)\nprint(player1._name)",
+        "detail": "oooop2",
+        "documentation": {}
+    },
+    {
+        "label": "player1",
+        "kind": 5,
+        "importPath": "oooop2",
+        "description": "oooop2",
+        "peekOfCode": "player1 = WizardPlayer(\"david\", 25)\nprint(player1._name)\nprint(player1.age)\nplayer1.attack()\nplayer2 = HeadWizard(\"lmao\", \"kys\", 8)\nplayer2.avada_kedabra()\nplayer2.attack()\nprint(player2._name)\n# Introspection\n# Dunder methods (třeba __init__)",
+        "detail": "oooop2",
+        "documentation": {}
+    },
+    {
+        "label": "player2",
+        "kind": 5,
+        "importPath": "oooop2",
+        "description": "oooop2",
+        "peekOfCode": "player2 = HeadWizard(\"lmao\", \"kys\", 8)\nplayer2.avada_kedabra()\nplayer2.attack()\nprint(player2._name)\n# Introspection\n# Dunder methods (třeba __init__)\nprint(dir(player2))\nprint(player2.__dir__())\n# Method resolution order = MRO\nprint(HeadWizard.mro())",
+        "detail": "oooop2",
+        "documentation": {}
+    },
+    {
+        "label": "slovo",
+        "kind": 5,
+        "importPath": "papousek",
+        "description": "papousek",
+        "peekOfCode": "slovo = input(\"Vítejte v papouškovi! Zadejte slovo:\\n\")\nprint(slovo)\nprint(slovo)",
+        "detail": "papousek",
+        "documentation": {}
+    },
+    {
+        "label": "question",
+        "kind": 5,
+        "importPath": "podminky",
+        "description": "podminky",
+        "peekOfCode": "question = input(\"Dobrý den, vítejte v kině, cena lístku pro dospělého je 150 kč, pro studenty 120 kč. Jste student?\")\nif question == \"Ano\" and \"ano\" :\n    print(\"platíte 120 kč\")\nif question == \"Ne\" and \"ne\" :\n    print(\"platíte 150 kč\")",
+        "detail": "podminky",
+        "documentation": {}
+    },
+    {
+        "label": "polomer",
+        "kind": 5,
+        "importPath": "povrchy",
+        "description": "povrchy",
+        "peekOfCode": "polomer = int(input(\"Zadejte poloměr koule, tento program vypočítá její objem a povrch\\n\"))\npovrch = m.pow(polomer,2) * 4 * m.pi\nobjem = polomer * m.pi * 4/3\nprint(f\"Povrch koule je {povrch } a objem {objem}\")",
+        "detail": "povrchy",
+        "documentation": {}
+    },
+    {
+        "label": "povrch",
+        "kind": 5,
+        "importPath": "povrchy",
+        "description": "povrchy",
+        "peekOfCode": "povrch = m.pow(polomer,2) * 4 * m.pi\nobjem = polomer * m.pi * 4/3\nprint(f\"Povrch koule je {povrch } a objem {objem}\")",
+        "detail": "povrchy",
+        "documentation": {}
+    },
+    {
+        "label": "objem",
+        "kind": 5,
+        "importPath": "povrchy",
+        "description": "povrchy",
+        "peekOfCode": "objem = polomer * m.pi * 4/3\nprint(f\"Povrch koule je {povrch } a objem {objem}\")",
+        "detail": "povrchy",
+        "documentation": {}
+    },
+    {
+        "label": "rok",
+        "kind": 5,
+        "importPath": "prestupny rok",
+        "description": "prestupny rok",
+        "peekOfCode": "rok = int(input(\"Zadejte mi rok:\\n\"))\nif rok % 4 == 0:\n    if rok % 100 > 0:\n        print(\"Zadaný rok je přestupný\")\n    elif rok % 100 == 0:\n        if rok % 400 == 0:\n            print(\"Zadaný rok je přestupný\")\nelse:\n    print(\"Zadaný rok je nepřestupný\")",
+        "detail": "prestupny rok",
+        "documentation": {}
+    },
+    {
+        "label": "vypocet_dni_v_danem_mesici",
+        "kind": 2,
+        "importPath": "procvicovani",
+        "description": "procvicovani",
+        "peekOfCode": "def vypocet_dni_v_danem_mesici(rok, mesic):\n    mesice = [\"leden\", \"unor\", \"brezen\", \"duben\", \"kveten\", \"cerven\", \"cervenec\", \"srpen\", \"zari\", \"rijen\", \"listopad\", \"prosinec\"]\n    poradi = mesice[mesic]\n    if mesic == \"unor\":\n        return days_in_month[poradi] + 1\n    else:\n        return days_in_month[poradi]\nprint(vypocet_dni_v_danem_mesici(rok, mesic))",
+        "detail": "procvicovani",
+        "documentation": {}
+    },
+    {
+        "label": "#cislo",
+        "kind": 5,
+        "importPath": "procvicovani",
+        "description": "procvicovani",
+        "peekOfCode": "#cislo = int(input(\"zadej číslo a já ti řeknu jestli je prvočíslo: \"))\n# def je_prvocislo(number):\n#     for i in range(2, cislo):\n#         if cislo % i == 0:\n#             return \"není\"\n#     else:\n#         return \"je\"\n# while True:\n#     print(f\"Dané číslo {je_prvocislo(number = cislo)} prvočíslo\")\n#     break",
+        "detail": "procvicovani",
+        "documentation": {}
+    },
+    {
+        "label": "days_in_month",
+        "kind": 5,
+        "importPath": "procvicovani",
+        "description": "procvicovani",
+        "peekOfCode": "days_in_month = [31,28,31,30,31,30,31,31,30,31,30,31]\nrok = int(input(\"Zadejte rok: \"))\nmesic = input(\"Zadejte mesic: \")\ndef vypocet_dni_v_danem_mesici(rok, mesic):\n    mesice = [\"leden\", \"unor\", \"brezen\", \"duben\", \"kveten\", \"cerven\", \"cervenec\", \"srpen\", \"zari\", \"rijen\", \"listopad\", \"prosinec\"]\n    poradi = mesice[mesic]\n    if mesic == \"unor\":\n        return days_in_month[poradi] + 1\n    else:\n        return days_in_month[poradi]",
+        "detail": "procvicovani",
+        "documentation": {}
+    },
+    {
+        "label": "rok",
+        "kind": 5,
+        "importPath": "procvicovani",
+        "description": "procvicovani",
+        "peekOfCode": "rok = int(input(\"Zadejte rok: \"))\nmesic = input(\"Zadejte mesic: \")\ndef vypocet_dni_v_danem_mesici(rok, mesic):\n    mesice = [\"leden\", \"unor\", \"brezen\", \"duben\", \"kveten\", \"cerven\", \"cervenec\", \"srpen\", \"zari\", \"rijen\", \"listopad\", \"prosinec\"]\n    poradi = mesice[mesic]\n    if mesic == \"unor\":\n        return days_in_month[poradi] + 1\n    else:\n        return days_in_month[poradi]\nprint(vypocet_dni_v_danem_mesici(rok, mesic))",
+        "detail": "procvicovani",
+        "documentation": {}
+    },
+    {
+        "label": "mesic",
+        "kind": 5,
+        "importPath": "procvicovani",
+        "description": "procvicovani",
+        "peekOfCode": "mesic = input(\"Zadejte mesic: \")\ndef vypocet_dni_v_danem_mesici(rok, mesic):\n    mesice = [\"leden\", \"unor\", \"brezen\", \"duben\", \"kveten\", \"cerven\", \"cervenec\", \"srpen\", \"zari\", \"rijen\", \"listopad\", \"prosinec\"]\n    poradi = mesice[mesic]\n    if mesic == \"unor\":\n        return days_in_month[poradi] + 1\n    else:\n        return days_in_month[poradi]\nprint(vypocet_dni_v_danem_mesici(rok, mesic))",
+        "detail": "procvicovani",
+        "documentation": {}
+    },
+    {
+        "label": "vek",
+        "kind": 5,
+        "importPath": "prumernyvek",
+        "description": "prumernyvek",
+        "peekOfCode": "vek = input(\"Zadejte váš věk:\\n\")\nroky = 90 - int(vek)\nmesice = roky * 12\ntydny = roky * 52\ndny = roky * 365\nprint(f\"Zbývá vám {roky} roků, {mesice} měsíců, {tydny} týdnů a {dny} dnů\")",
+        "detail": "prumernyvek",
+        "documentation": {}
+    },
+    {
+        "label": "roky",
+        "kind": 5,
+        "importPath": "prumernyvek",
+        "description": "prumernyvek",
+        "peekOfCode": "roky = 90 - int(vek)\nmesice = roky * 12\ntydny = roky * 52\ndny = roky * 365\nprint(f\"Zbývá vám {roky} roků, {mesice} měsíců, {tydny} týdnů a {dny} dnů\")",
+        "detail": "prumernyvek",
+        "documentation": {}
+    },
+    {
+        "label": "mesice",
+        "kind": 5,
+        "importPath": "prumernyvek",
+        "description": "prumernyvek",
+        "peekOfCode": "mesice = roky * 12\ntydny = roky * 52\ndny = roky * 365\nprint(f\"Zbývá vám {roky} roků, {mesice} měsíců, {tydny} týdnů a {dny} dnů\")",
+        "detail": "prumernyvek",
+        "documentation": {}
+    },
+    {
+        "label": "tydny",
+        "kind": 5,
+        "importPath": "prumernyvek",
+        "description": "prumernyvek",
+        "peekOfCode": "tydny = roky * 52\ndny = roky * 365\nprint(f\"Zbývá vám {roky} roků, {mesice} měsíců, {tydny} týdnů a {dny} dnů\")",
+        "detail": "prumernyvek",
+        "documentation": {}
+    },
+    {
+        "label": "dny",
+        "kind": 5,
+        "importPath": "prumernyvek",
+        "description": "prumernyvek",
+        "peekOfCode": "dny = roky * 365\nprint(f\"Zbývá vám {roky} roků, {mesice} měsíců, {tydny} týdnů a {dny} dnů\")",
+        "detail": "prumernyvek",
+        "documentation": {}
+    },
+    {
+        "label": "Question",
+        "kind": 6,
+        "importPath": "question_model",
+        "description": "question_model",
+        "peekOfCode": "class Question:\n    def __init__(self, question_text, question_answer):\n        self.text = question_text\n        self.answer = question_answer\n# q_1 = Question(\"Python vznikl v roce 1991\", \"True\")\n# q_2 = Question(\"Operační systém Linux byl založen Linusem Torvaldem\", \"True\")",
+        "detail": "question_model",
+        "documentation": {}
+    },
+    {
+        "label": "velikost",
+        "kind": 5,
+        "importPath": "restaurace",
+        "description": "restaurace",
+        "peekOfCode": "velikost = input(\"Jakou chcete velikost pizzy?\")\ncena = 0\nif velikost == \"S\":\n    cena = 100\nelif velikost == \"M\":\n    cena = 150\nelif velikost == \"L\":\n    cena = 200  \nfeferonky = input(\"Chcete k pizze feferonky?\")\nif feferonky == \"ano\" and velikost == \"S\":",
+        "detail": "restaurace",
+        "documentation": {}
+    },
+    {
+        "label": "cena",
+        "kind": 5,
+        "importPath": "restaurace",
+        "description": "restaurace",
+        "peekOfCode": "cena = 0\nif velikost == \"S\":\n    cena = 100\nelif velikost == \"M\":\n    cena = 150\nelif velikost == \"L\":\n    cena = 200  \nfeferonky = input(\"Chcete k pizze feferonky?\")\nif feferonky == \"ano\" and velikost == \"S\":\n    cena = cena + 20",
+        "detail": "restaurace",
+        "documentation": {}
+    },
+    {
+        "label": "feferonky",
+        "kind": 5,
+        "importPath": "restaurace",
+        "description": "restaurace",
+        "peekOfCode": "feferonky = input(\"Chcete k pizze feferonky?\")\nif feferonky == \"ano\" and velikost == \"S\":\n    cena = cena + 20\nelif feferonky == \"ano\" and velikost == \"M\" :\n    cena = cena + 30\nelif feferonky == \"ano\" and velikost == \"L\" :\n    cena = cena + 30\nsyr = input(\"Chcete ještě sýr navíc?\")\nif syr == \"ano\":\n    cena = cena + 15",
+        "detail": "restaurace",
+        "documentation": {}
+    },
+    {
+        "label": "syr",
+        "kind": 5,
+        "importPath": "restaurace",
+        "description": "restaurace",
+        "peekOfCode": "syr = input(\"Chcete ještě sýr navíc?\")\nif syr == \"ano\":\n    cena = cena + 15\nprint(f\"Vaše výsledná cena je {cena} Kč\")",
+        "detail": "restaurace",
+        "documentation": {}
+    },
+    {
+        "label": "cislo",
+        "kind": 5,
+        "importPath": "sinus a tak dal",
+        "description": "sinus a tak dal",
+        "peekOfCode": "cislo = int(input(\"Zadejte velikost úhlu:\\n\"))\nprint(m.sin(cislo))\nprint(m.cos(cislo))",
+        "detail": "sinus a tak dal",
+        "documentation": {}
+    },
+    {
+        "label": "jmeno",
+        "kind": 5,
+        "importPath": "snadtopude",
+        "description": "snadtopude",
+        "peekOfCode": "jmeno = input(\"Jaké je tvé křestní jméno?\\n\")\nprijimeni = input(\"Jaká je tvá typická vlastnost? Napiš ji s velkým písmenem.\\n\")\nprint(\"Tvoje vtipné jméno je \" + jmeno + \" \" + prijimeni)",
+        "detail": "snadtopude",
+        "documentation": {}
+    },
+    {
+        "label": "prijimeni",
+        "kind": 5,
+        "importPath": "snadtopude",
+        "description": "snadtopude",
+        "peekOfCode": "prijimeni = input(\"Jaká je tvá typická vlastnost? Napiš ji s velkým písmenem.\\n\")\nprint(\"Tvoje vtipné jméno je \" + jmeno + \" \" + prijimeni)",
+        "detail": "snadtopude",
+        "documentation": {}
+    },
+    {
+        "label": "MENU",
+        "kind": 5,
+        "importPath": "source_data",
+        "description": "source_data",
+        "peekOfCode": "MENU = {\n    \"espresso\": {\n        \"ingredients\": {\n            \"water\": 50,\n            \"milk\": 0,\n            \"coffee\": 18,\n        },\n        \"cost\": 40,\n    },\n    \"latte\": {",
+        "detail": "source_data",
+        "documentation": {}
+    },
+    {
+        "label": "resources",
+        "kind": 5,
+        "importPath": "source_data",
+        "description": "source_data",
+        "peekOfCode": "resources = {\n    \"water\": 400,\n    \"milk\": 300,\n    \"coffee\": 150,\n}",
+        "detail": "source_data",
+        "documentation": {}
+    },
+    {
+        "label": "pridavani_hrdinu",
+        "kind": 2,
+        "importPath": "treninkova_uloha_Krocil",
+        "description": "treninkova_uloha_Krocil",
+        "peekOfCode": "def pridavani_hrdinu(friendly_postavy, enemy):\n    global charakteristika\n    name = input(\"Zadejte jméno nového hrdiny (string): \")\n    lives = int(input(\"Zadejte životy nového hrdiny (integer): \"))\n    attack = int(input(\"Zadejte hodnotu útoku nového hrdiny (integer): \"))\n    agility  = int(input(\"Zadejte hodnotu obratnosti nového hrdiny (integer): \"))\n    defense = int(input(\"Zadejte hodnotu obrany nového hrdiny (integer): \"))\n    charakteristika = input(\"Chcete k novému hrdinovi napsat krátký popisek (string)? Jestli ano, napište jej, pokud ne zmáčkněte (2)\\n\")\n    if charakteristika == \"2\":\n        charakteristika = ()",
+        "detail": "treninkova_uloha_Krocil",
+        "documentation": {}
+    },
+    {
+        "label": "hra",
+        "kind": 2,
+        "importPath": "treninkova_uloha_Krocil",
+        "description": "treninkova_uloha_Krocil",
+        "peekOfCode": "def hra():\n  print(\"Vítejte ve hře Magic Duel! Ve zkratce je to hra, ve které proti sobě bojují dva hrdinové.\")\n  print()\n  print(\"Nejdříve si ale vyberte, jestli chcete hrát (1) nebo do hry přidat nové hrdiny (2)\")\n  vyber_modu()\ndef vyber_modu():\n    choice = input()\n    if choice == \"1\":\n        vyber_hrdinu(friendly_postavy)\n    elif choice == \"2\":",
+        "detail": "treninkova_uloha_Krocil",
+        "documentation": {}
+    },
+    {
+        "label": "vyber_modu",
+        "kind": 2,
+        "importPath": "treninkova_uloha_Krocil",
+        "description": "treninkova_uloha_Krocil",
+        "peekOfCode": "def vyber_modu():\n    choice = input()\n    if choice == \"1\":\n        vyber_hrdinu(friendly_postavy)\n    elif choice == \"2\":\n        pridavani_hrdinu(friendly_postavy, enemy)\ndef vyber_hrdinu(friendly_postavy):\n    global hero_choice\n    print(\"dostupní hrdinové:\")\n    for hero in friendly_postavy:",
+        "detail": "treninkova_uloha_Krocil",
+        "documentation": {}
+    },
+    {
+        "label": "vyber_hrdinu",
+        "kind": 2,
+        "importPath": "treninkova_uloha_Krocil",
+        "description": "treninkova_uloha_Krocil",
+        "peekOfCode": "def vyber_hrdinu(friendly_postavy):\n    global hero_choice\n    print(\"dostupní hrdinové:\")\n    for hero in friendly_postavy:\n        print(hero)\n        print(\"﹋﹋﹋﹋﹋﹋\")\n    hero_choice = input(\"Napište sem jméno zvoleného hrdiny a hra vám k němu vypíše podrobnosti. (stačí malými písmeny)\\nVýběr: \")\n    if hero_choice.title() in friendly_postavy:\n        charakteristika_hrdiny(hero_choice) \n    else:",
+        "detail": "treninkova_uloha_Krocil",
+        "documentation": {}
+    },
+    {
+        "label": "charakteristika_hrdiny",
+        "kind": 2,
+        "importPath": "treninkova_uloha_Krocil",
+        "description": "treninkova_uloha_Krocil",
+        "peekOfCode": "def charakteristika_hrdiny(hero_choice):\n    hero_choice = hero_choice.title()\n    if hero_choice == \"Draven\":\n        print()\n        print(f\"Vybrali jste si hrdinu {hero_choice}.\")\n        print(\"Popis:\")\n        print(\"Draven je válečný hrdina, který se nebojí ničeho. Je to rváč a s ničím se nepáře. Jen není moc obratný.\")\n        print()\n    elif hero_choice == \"Arintheus\":\n        print()",
+        "detail": "treninkova_uloha_Krocil",
+        "documentation": {}
+    },
+    {
+        "label": "vyber_opponenta",
+        "kind": 2,
+        "importPath": "treninkova_uloha_Krocil",
+        "description": "treninkova_uloha_Krocil",
+        "peekOfCode": "def vyber_opponenta(enemy):\n    global enemy_choice\n    print(\"﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋\")\n    print(\"Nyní je čas si vybrat svého soupeře. Na výběr máme pár možností:\")\n    print()\n    for enemy_hero in enemy:\n        print(enemy_hero)\n        print(\"﹋﹋﹋﹋﹋﹋\")\n    enemy_choice = input(\"Napište sem jméno zvoleného hrdiny a hra vám k němu vypíše podrobnosti. (stačí malými písmeny)\\nVýběr: \")\n    if enemy_choice.title() in enemy:",
+        "detail": "treninkova_uloha_Krocil",
+        "documentation": {}
+    },
+    {
+        "label": "charakteristika_enemy",
+        "kind": 2,
+        "importPath": "treninkova_uloha_Krocil",
+        "description": "treninkova_uloha_Krocil",
+        "peekOfCode": "def charakteristika_enemy(enemy_choice):\n    enemy_choice = enemy_choice.title()\n    if enemy_choice == \"Drakul\":\n        print(f\"Vybrali jste si soupeře {enemy_choice}.\")\n        print(\"Drakul je hrdina, jehož hlavní předností je obrana. Má na sobě totiž odolné brnění, které jej chrání.\")\n        print()\n    elif enemy_choice == \"Barlog\":\n        print(f\"Vybrali jste si soupeře {enemy_choice}.\")\n        print(\"Barlog je hrdina, který dovede rozhodně překvapit svou útočnou silou. Zato jeho životy nestojí za mnoho řečí.\")\n        print()",
+        "detail": "treninkova_uloha_Krocil",
+        "documentation": {}
+    },
+    {
+        "label": "boj",
+        "kind": 2,
+        "importPath": "treninkova_uloha_Krocil",
+        "description": "treninkova_uloha_Krocil",
+        "peekOfCode": "def boj(enemy_choice, hero_choice, friendly_postavy, enemy):\n    global statistiky_friendly_hrdiny\n    global statistiky_enemy_hrdiny\n    hero_choice = hero_choice.title()\n    enemy_choice = enemy_choice.title()\n    statistiky_friendly_hrdiny = friendly_postavy[hero_choice]\n    statistiky_enemy_hrdiny = enemy[enemy_choice]\n    print(\"﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋\")\n    print(f\"STATISTIKY HRDINY ({hero_choice}):\")\n    print()",
+        "detail": "treninkova_uloha_Krocil",
+        "documentation": {}
+    },
+    {
+        "label": "utok_hrdiny",
+        "kind": 2,
+        "importPath": "treninkova_uloha_Krocil",
+        "description": "treninkova_uloha_Krocil",
+        "peekOfCode": "def utok_hrdiny(statistiky_friendly_hrdiny, statistiky_enemy_hrdiny, hero_choice, enemy_choice):\n    print(\"Útok hrdiny:\") \n    print()\n    miss_needed_number = 50\n    miss_number = random.randint(0, 50)\n    if miss_number + statistiky_enemy_hrdiny[\"obratnost\"] >= miss_needed_number:\n        print(f\"Hrdina {hero_choice} netrefil svůj útok.\")\n        print(\"﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋\")\n    else:\n        hrdina_damage = random.randint(0, statistiky_friendly_hrdiny[\"útok\"])",
+        "detail": "treninkova_uloha_Krocil",
+        "documentation": {}
+    },
+    {
+        "label": "utok_enemy",
+        "kind": 2,
+        "importPath": "treninkova_uloha_Krocil",
+        "description": "treninkova_uloha_Krocil",
+        "peekOfCode": "def utok_enemy(statistiky_friendly_hrdiny, statistiky_enemy_hrdiny, hero_choice, enemy_choice):\n    print(\"Útok protivníka:\") \n    print()\n    enemy_damage = random.randint(0, statistiky_enemy_hrdiny[\"útok\"])\n    hero_protection = random.randint(0, statistiky_friendly_hrdiny[\"obrana\"])\n    final_enemy_damage = enemy_damage - hero_protection\n    if final_enemy_damage <= 0:\n            print(f\"Obrana hrdiny {hero_choice} vykryla útok hrdiny {enemy_choice}.\")\n            print(\"﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋\")\n    else:",
+        "detail": "treninkova_uloha_Krocil",
+        "documentation": {}
+    },
+    {
+        "label": "friendly_postavy",
+        "kind": 5,
+        "importPath": "treninkova_uloha_Krocil",
+        "description": "treninkova_uloha_Krocil",
+        "peekOfCode": "friendly_postavy = {\"Draven\":\n           {\"životy\": 100,\n            \"útok\": 35,\n            \"obratnost\": 5,\n            \"obrana\": 25}, \n           \"Arintheus\":{\n            \"životy\": 90,\n            \"útok\": 20,\n            \"obratnost\": 15, \n           \"obrana\": 20}, ",
+        "detail": "treninkova_uloha_Krocil",
+        "documentation": {}
+    },
+    {
+        "label": "enemy",
+        "kind": 5,
+        "importPath": "treninkova_uloha_Krocil",
+        "description": "treninkova_uloha_Krocil",
+        "peekOfCode": "enemy = {\"Drakul\":\n         {\"životy\": 60,\n            \"útok\": 20,\n            \"obratnost\": 15,\n            \"obrana\": 30}, \n            \"Barlog\":\n            {\n            \"životy\": 70,\n            \"útok\": 30,\n            \"obratnost\": 10,",
+        "detail": "treninkova_uloha_Krocil",
+        "documentation": {}
+    },
+    {
+        "label": "zaklad",
+        "kind": 5,
+        "importPath": "ukol nove ",
+        "description": "ukol nove ",
+        "peekOfCode": "zaklad = 1\ncislo = 2 \nzivoty = 5 \nspravna_odpoved  = random.randint(zaklad, cislo)\nprint(\"Máš 5 životů\")\nwhile True :\n    hadani = int(input(f\"Zkus uhodnout číslo v rozmezí od 1 do {cislo}!\\n\"))        \n    if (hadani > cislo) or (hadani < zaklad):\n        print(\"Nemůžeš hádat jiná čísla než která jsou v zadaném intervalu!\")\n    elif hadani < spravna_odpoved:",
+        "detail": "ukol nove ",
+        "documentation": {}
+    },
+    {
+        "label": "cislo",
+        "kind": 5,
+        "importPath": "ukol nove ",
+        "description": "ukol nove ",
+        "peekOfCode": "cislo = 2 \nzivoty = 5 \nspravna_odpoved  = random.randint(zaklad, cislo)\nprint(\"Máš 5 životů\")\nwhile True :\n    hadani = int(input(f\"Zkus uhodnout číslo v rozmezí od 1 do {cislo}!\\n\"))        \n    if (hadani > cislo) or (hadani < zaklad):\n        print(\"Nemůžeš hádat jiná čísla než která jsou v zadaném intervalu!\")\n    elif hadani < spravna_odpoved:\n        zivoty -= 1",
+        "detail": "ukol nove ",
+        "documentation": {}
+    },
+    {
+        "label": "zivoty",
+        "kind": 5,
+        "importPath": "ukol nove ",
+        "description": "ukol nove ",
+        "peekOfCode": "zivoty = 5 \nspravna_odpoved  = random.randint(zaklad, cislo)\nprint(\"Máš 5 životů\")\nwhile True :\n    hadani = int(input(f\"Zkus uhodnout číslo v rozmezí od 1 do {cislo}!\\n\"))        \n    if (hadani > cislo) or (hadani < zaklad):\n        print(\"Nemůžeš hádat jiná čísla než která jsou v zadaném intervalu!\")\n    elif hadani < spravna_odpoved:\n        zivoty -= 1\n        if zivoty == 0:",
+        "detail": "ukol nove ",
+        "documentation": {}
+    },
+    {
+        "label": "cyklus",
+        "kind": 5,
+        "importPath": "ukol",
+        "description": "ukol",
+        "peekOfCode": "cyklus = True\nwhile cyklus == True: \n    i = random.randint(11, 20)\n    for i in range (1, i):\n        jmeno = random.choice([\"Fanas\",\"Martin\", \"Ondra\", \"Maxim\", \"Jaroslav\",\"Daniel\", \"Honza\", \"Danny\", \"Radim\"])\n        prijmeni = random.choice([\"Krocil\", \"Balosak\", \"Skoda\", \"Stoev\", \"Herrgott\", \"Mana\", \"Dlabaja\", \"Miklas\"])\n        cislo_ulice = random.randrange(100, 1000)\n        nazvy_ulic = random.choice([\"Beach\", \"Connecticut\", \"Embassy\", \"Massachussets\", \"Green\"])\n        nazev_mesta = random.choice([\"Huntsville AL\", \"Anchorage AL\", \"Phoenix AR\", \"Los Angeles CA\", \"Atlanta GE\"])\n        smerovaci_cislo = random.randint(10000, 100000)",
+        "detail": "ukol",
+        "documentation": {}
+    },
+    {
+        "label": "spoj_stringy",
+        "kind": 2,
+        "importPath": "ukolyyy",
+        "description": "ukolyyy",
+        "peekOfCode": "def spoj_stringy(string, symbol):\n    veta = []\n    for i in string:\n        retezec = i + symbol\n        veta.append(retezec)\n    print(len(veta))\ntexty = [\"ahoj\", \"jak\", \"se\", \"vede\"]\nprint( spoj_stringy(texty, \" °-_-> \") )",
+        "detail": "ukolyyy",
+        "documentation": {}
+    },
+    {
+        "label": "texty",
+        "kind": 5,
+        "importPath": "ukolyyy",
+        "description": "ukolyyy",
+        "peekOfCode": "texty = [\"ahoj\", \"jak\", \"se\", \"vede\"]\nprint( spoj_stringy(texty, \" °-_-> \") )",
+        "detail": "ukolyyy",
+        "documentation": {}
+    },
+    {
+        "label": "random_generace_cisla_A",
+        "kind": 2,
+        "importPath": "velka_hra",
+        "description": "velka_hra",
+        "peekOfCode": "def random_generace_cisla_A():\n    global cisloA\n    cisloA = random.randint(0,10)\ndef random_generace_cisla_B():\n    global cisloB\n    cisloB = random.randint(0, 10)\n    if cisloA == cisloB :\n        random_generace_cisla_A()\n        random_generace_cisla_B()\ndef vybirani_otazky_A(data, cisloA):",
+        "detail": "velka_hra",
+        "documentation": {}
+    },
+    {
+        "label": "random_generace_cisla_B",
+        "kind": 2,
+        "importPath": "velka_hra",
+        "description": "velka_hra",
+        "peekOfCode": "def random_generace_cisla_B():\n    global cisloB\n    cisloB = random.randint(0, 10)\n    if cisloA == cisloB :\n        random_generace_cisla_A()\n        random_generace_cisla_B()\ndef vybirani_otazky_A(data, cisloA):\n    return f\"Porovnejte A: {data[cisloA]['name']}, {data[cisloA]['description']}, z {data[cisloA]['country']}\"\ndef vybirani_otazky_B(data, cisloB):\n    return f\"Porovnejte B: {data[cisloB]['name']}, {data[cisloB]['description']}, z {data[cisloB]['country']}\"",
+        "detail": "velka_hra",
+        "documentation": {}
+    },
+    {
+        "label": "vybirani_otazky_A",
+        "kind": 2,
+        "importPath": "velka_hra",
+        "description": "velka_hra",
+        "peekOfCode": "def vybirani_otazky_A(data, cisloA):\n    return f\"Porovnejte A: {data[cisloA]['name']}, {data[cisloA]['description']}, z {data[cisloA]['country']}\"\ndef vybirani_otazky_B(data, cisloB):\n    return f\"Porovnejte B: {data[cisloB]['name']}, {data[cisloB]['description']}, z {data[cisloB]['country']}\"\ndef spravna_odpoved():\n    A = {data[cisloA]['follower_count']}\n    B = {data[cisloB]['follower_count']}\n    for i in A:\n        A = int(i)\n    for i in B:",
+        "detail": "velka_hra",
+        "documentation": {}
+    },
+    {
+        "label": "vybirani_otazky_B",
+        "kind": 2,
+        "importPath": "velka_hra",
+        "description": "velka_hra",
+        "peekOfCode": "def vybirani_otazky_B(data, cisloB):\n    return f\"Porovnejte B: {data[cisloB]['name']}, {data[cisloB]['description']}, z {data[cisloB]['country']}\"\ndef spravna_odpoved():\n    A = {data[cisloA]['follower_count']}\n    B = {data[cisloB]['follower_count']}\n    for i in A:\n        A = int(i)\n    for i in B:\n        B = int(i)\n    if A > B:",
+        "detail": "velka_hra",
+        "documentation": {}
+    },
+    {
+        "label": "spravna_odpoved",
+        "kind": 2,
+        "importPath": "velka_hra",
+        "description": "velka_hra",
+        "peekOfCode": "def spravna_odpoved():\n    A = {data[cisloA]['follower_count']}\n    B = {data[cisloB]['follower_count']}\n    for i in A:\n        A = int(i)\n    for i in B:\n        B = int(i)\n    if A > B:\n        return \"A\"\n    else:",
+        "detail": "velka_hra",
+        "documentation": {}
+    },
+    {
+        "label": "rozhodnuti",
+        "kind": 2,
+        "importPath": "velka_hra",
+        "description": "velka_hra",
+        "peekOfCode": "def rozhodnuti():\n    rozhodnuti = input(\"Kdo má více sledujícíh na instagramu? \")\n    if rozhodnuti == spravna_odpoved():\n        global body\n        print(\"Získáváš bod\")\n        body += 1\n        print(f\"Nyní máš {body} bodů\")\n        dalsi_hra()\n    else:\n        print(\"Prohrál jsi!\")",
+        "detail": "velka_hra",
+        "documentation": {}
+    },
+    {
+        "label": "dalsi_hra",
+        "kind": 2,
+        "importPath": "velka_hra",
+        "description": "velka_hra",
+        "peekOfCode": "def dalsi_hra():\n    if spravna_odpoved() == \"A\":\n        print(vybirani_otazky_A(data, cisloA))\n        random_generace_cisla_B()\n        if cisloA == cisloB :\n            random_generace_cisla_A()\n            random_generace_cisla_B()\n        print(vybirani_otazky_B(data, cisloB))\n        rozhodnuti()\n        spravna_odpoved()",
+        "detail": "velka_hra",
+        "documentation": {}
+    },
+    {
+        "label": "body",
+        "kind": 5,
+        "importPath": "velka_hra",
+        "description": "velka_hra",
+        "peekOfCode": "body = 0\ndata = [\n    {\n        'name': 'Instagram',\n        'follower_count': 501,\n        'description': 'Sociální platforma',\n        'country': 'USA'\n    },\n    {\n        'name': 'Facebook',",
+        "detail": "velka_hra",
+        "documentation": {}
+    },
+    {
+        "label": "data",
+        "kind": 5,
+        "importPath": "velka_hra",
+        "description": "velka_hra",
+        "peekOfCode": "data = [\n    {\n        'name': 'Instagram',\n        'follower_count': 501,\n        'description': 'Sociální platforma',\n        'country': 'USA'\n    },\n    {\n        'name': 'Facebook',\n        'follower_count': 4,",
+        "detail": "velka_hra",
+        "documentation": {}
+    },
+    {
+        "label": "odvesna",
+        "kind": 5,
+        "importPath": "vypocet trojuhelniku",
+        "description": "vypocet trojuhelniku",
+        "peekOfCode": "odvesna = int(input(\"Zadejte délku odvěsny a\\n\"))\nodvesna2 = int(input(\"Zadejte délku odvěsny a\\n\"))\nvysledek = m.sqrt(m.pow(odvesna, 2 )+m.pow(odvesna2,2))\nprint(f\"Délka přepony je {vysledek}\")",
+        "detail": "vypocet trojuhelniku",
+        "documentation": {}
+    },
+    {
+        "label": "odvesna2",
+        "kind": 5,
+        "importPath": "vypocet trojuhelniku",
+        "description": "vypocet trojuhelniku",
+        "peekOfCode": "odvesna2 = int(input(\"Zadejte délku odvěsny a\\n\"))\nvysledek = m.sqrt(m.pow(odvesna, 2 )+m.pow(odvesna2,2))\nprint(f\"Délka přepony je {vysledek}\")",
+        "detail": "vypocet trojuhelniku",
+        "documentation": {}
+    },
+    {
+        "label": "vysledek",
+        "kind": 5,
+        "importPath": "vypocet trojuhelniku",
+        "description": "vypocet trojuhelniku",
+        "peekOfCode": "vysledek = m.sqrt(m.pow(odvesna, 2 )+m.pow(odvesna2,2))\nprint(f\"Délka přepony je {vysledek}\")",
+        "detail": "vypocet trojuhelniku",
+        "documentation": {}
+    },
+    {
+        "label": "input",
+        "kind": 5,
+        "importPath": "wtf",
+        "description": "wtf",
+        "peekOfCode": "input = 4732\nmetr = input // 1000\nmetr_zb = input % 1000\ncentimetr = metr_zb // 10\nmilimetr = metr_zb % 10\nprint(f\"Délka se skládá z {metr} metrů, {centimetr} centimetrů a {milimetr} milimetrů\")",
+        "detail": "wtf",
+        "documentation": {}
+    },
+    {
+        "label": "metr",
+        "kind": 5,
+        "importPath": "wtf",
+        "description": "wtf",
+        "peekOfCode": "metr = input // 1000\nmetr_zb = input % 1000\ncentimetr = metr_zb // 10\nmilimetr = metr_zb % 10\nprint(f\"Délka se skládá z {metr} metrů, {centimetr} centimetrů a {milimetr} milimetrů\")",
+        "detail": "wtf",
+        "documentation": {}
+    },
+    {
+        "label": "metr_zb",
+        "kind": 5,
+        "importPath": "wtf",
+        "description": "wtf",
+        "peekOfCode": "metr_zb = input % 1000\ncentimetr = metr_zb // 10\nmilimetr = metr_zb % 10\nprint(f\"Délka se skládá z {metr} metrů, {centimetr} centimetrů a {milimetr} milimetrů\")",
+        "detail": "wtf",
+        "documentation": {}
+    },
+    {
+        "label": "centimetr",
+        "kind": 5,
+        "importPath": "wtf",
+        "description": "wtf",
+        "peekOfCode": "centimetr = metr_zb // 10\nmilimetr = metr_zb % 10\nprint(f\"Délka se skládá z {metr} metrů, {centimetr} centimetrů a {milimetr} milimetrů\")",
+        "detail": "wtf",
+        "documentation": {}
+    },
+    {
+        "label": "milimetr",
+        "kind": 5,
+        "importPath": "wtf",
+        "description": "wtf",
+        "peekOfCode": "milimetr = metr_zb % 10\nprint(f\"Délka se skládá z {metr} metrů, {centimetr} centimetrů a {milimetr} milimetrů\")",
+        "detail": "wtf",
+        "documentation": {}
+    },
+    {
+        "label": "x",
+        "kind": 5,
+        "importPath": "xdd",
+        "description": "xdd",
+        "peekOfCode": "x = \"danny\"\nprint(x)\nx = None\nprint(x)",
+        "detail": "xdd",
+        "documentation": {}
+    },
+    {
+        "label": "x",
+        "kind": 5,
+        "importPath": "xdd",
+        "description": "xdd",
+        "peekOfCode": "x = None\nprint(x)",
+        "detail": "xdd",
+        "documentation": {}
+    },
+    {
+        "label": "barva",
+        "kind": 2,
+        "importPath": "zelvaa",
+        "description": "zelvaa",
+        "peekOfCode": "def barva():\n    colors = [\"red\", \"blue\", \"yellow\", \"green\"]\n    return random.choice(colors)\ndef uhel_strana():\n    x = [\"vpravo\", \"vlevo\"]\n    return random.choice(x)\nsize = 1\nwhile True:\n    tomas.color(barva())\n    if uhel_strana() == \"vpravo\":",
+        "detail": "zelvaa",
+        "documentation": {}
+    },
+    {
+        "label": "uhel_strana",
+        "kind": 2,
+        "importPath": "zelvaa",
+        "description": "zelvaa",
+        "peekOfCode": "def uhel_strana():\n    x = [\"vpravo\", \"vlevo\"]\n    return random.choice(x)\nsize = 1\nwhile True:\n    tomas.color(barva())\n    if uhel_strana() == \"vpravo\":\n        tomas.right(90)\n        tomas.forward(50)\n    else:",
+        "detail": "zelvaa",
+        "documentation": {}
+    },
+    {
+        "label": "tomas",
+        "kind": 5,
+        "importPath": "zelvaa",
+        "description": "zelvaa",
+        "peekOfCode": "tomas = Turtle()\ntomas.shape(\"turtle\")\ndef barva():\n    colors = [\"red\", \"blue\", \"yellow\", \"green\"]\n    return random.choice(colors)\ndef uhel_strana():\n    x = [\"vpravo\", \"vlevo\"]\n    return random.choice(x)\nsize = 1\nwhile True:",
+        "detail": "zelvaa",
+        "documentation": {}
+    },
+    {
+        "label": "size",
+        "kind": 5,
+        "importPath": "zelvaa",
+        "description": "zelvaa",
+        "peekOfCode": "size = 1\nwhile True:\n    tomas.color(barva())\n    if uhel_strana() == \"vpravo\":\n        tomas.right(90)\n        tomas.forward(50)\n    else:\n        tomas.left(90)\n        tomas.forward(50)\n    tomas.pensize(size)",
+        "detail": "zelvaa",
+        "documentation": {}
+    },
+    {
+        "label": "my_screen",
+        "kind": 5,
+        "importPath": "zelvaa",
+        "description": "zelvaa",
+        "peekOfCode": "my_screen = Screen()\nmy_screen.bgcolor(\"white\")\nmy_screen.exitonclick()",
+        "detail": "zelvaa",
+        "documentation": {}
+    }
+]

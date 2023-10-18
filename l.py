@@ -1,0 +1,2 @@
+k = "kys"
+print(k)
