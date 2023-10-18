@@ -13,3 +13,4 @@ for _ in range(len(list_result) - 1):
                         list_result[i + 1], list_result[i] = list_result[i], list_result[i + 1]
 print(list_result)
 print(list_result)
+print()
