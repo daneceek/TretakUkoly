@@ -14,3 +14,5 @@ for _ in range(len(list_result) - 1):
 print(list_result)
 print(list_result)
 print("dnes jsem to zandal")
+print("kys")
+print("joo")
