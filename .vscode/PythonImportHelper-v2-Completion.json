@@ -1,0 +1,225 @@
+[
+    {
+        "label": "get_random_list",
+        "importPath": "generator",
+        "description": "generator",
+        "isExtraImport": true,
+        "detail": "generator",
+        "documentation": {}
+    },
+    {
+        "label": "deepcopy",
+        "importPath": "copy",
+        "description": "copy",
+        "isExtraImport": true,
+        "detail": "copy",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "unicodedata",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "unicodedata",
+        "description": "unicodedata",
+        "detail": "unicodedata",
+        "documentation": {}
+    },
+    {
+        "label": "stdin",
+        "importPath": "sys",
+        "description": "sys",
+        "isExtraImport": true,
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "stdout",
+        "importPath": "sys",
+        "description": "sys",
+        "isExtraImport": true,
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "stderr",
+        "importPath": "sys",
+        "description": "sys",
+        "isExtraImport": true,
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "argv",
+        "importPath": "sys",
+        "description": "sys",
+        "isExtraImport": true,
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "stdin",
+        "importPath": "sys",
+        "description": "sys",
+        "isExtraImport": true,
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "stdout",
+        "importPath": "sys",
+        "description": "sys",
+        "isExtraImport": true,
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "stderr",
+        "importPath": "sys",
+        "description": "sys",
+        "isExtraImport": true,
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "os",
+        "description": "os",
+        "isExtraImport": true,
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "ascii_uppercase",
+        "importPath": "string",
+        "description": "string",
+        "isExtraImport": true,
+        "detail": "string",
+        "documentation": {}
+    },
+    {
+        "label": "seznam",
+        "kind": 5,
+        "importPath": "bubblesort.bubblesort",
+        "description": "bubblesort.bubblesort",
+        "peekOfCode": "seznam = get_random_list(10, 0,50)\n# def bubblesort_list(seznam):\nlist_result = deepcopy(seznam)\nprint(list_result) \nfor _ in range(len(list_result) - 1):\n        for i in range(len(list_result) - 1):\n                if list_result[i] > list_result[i + 1]:\n                        list_result[i + 1], list_result[i] = list_result[i], list_result[i + 1]\nprint(list_result)\nprint(list_result)",
+        "detail": "bubblesort.bubblesort",
+        "documentation": {}
+    },
+    {
+        "label": "list_result",
+        "kind": 5,
+        "importPath": "bubblesort.bubblesort",
+        "description": "bubblesort.bubblesort",
+        "peekOfCode": "list_result = deepcopy(seznam)\nprint(list_result) \nfor _ in range(len(list_result) - 1):\n        for i in range(len(list_result) - 1):\n                if list_result[i] > list_result[i + 1]:\n                        list_result[i + 1], list_result[i] = list_result[i], list_result[i + 1]\nprint(list_result)\nprint(list_result)\nprint(\"dnes jsem to zandal\")",
+        "detail": "bubblesort.bubblesort",
+        "documentation": {}
+    },
+    {
+        "label": "get_random_list",
+        "kind": 2,
+        "importPath": "bubblesort.generator",
+        "description": "bubblesort.generator",
+        "peekOfCode": "def get_random_list(n, min = 0, max = 100):\n    seznam = []\n    if min >= max:\n        raise ValueError(\"Min je vetsi nez max\")\n    for _ in range(n):\n        seznam.append(random.randint(min, max))\n        # seznam += [random.randint(min, max)]\n    return seznam",
+        "detail": "bubblesort.generator",
+        "documentation": {}
+    },
+    {
+        "label": "seznam",
+        "kind": 5,
+        "importPath": "bubblesort.generator",
+        "description": "bubblesort.generator",
+        "peekOfCode": "seznam = []\ndef get_random_list(n, min = 0, max = 100):\n    seznam = []\n    if min >= max:\n        raise ValueError(\"Min je vetsi nez max\")\n    for _ in range(n):\n        seznam.append(random.randint(min, max))\n        # seznam += [random.randint(min, max)]\n    return seznam",
+        "detail": "bubblesort.generator",
+        "documentation": {}
+    },
+    {
+        "label": "sum",
+        "kind": 2,
+        "importPath": "bubblesort.pocitadlo",
+        "description": "bubblesort.pocitadlo",
+        "peekOfCode": "def sum(seznam):\n    dohromady = 0\n    for i in seznam:\n        dohromady += i\n    return dohromady\ndef max(seznam):\n    nej = -9999999999\n    for i in seznam:\n        if i > nej:\n            nej = i",
+        "detail": "bubblesort.pocitadlo",
+        "documentation": {}
+    },
+    {
+        "label": "max",
+        "kind": 2,
+        "importPath": "bubblesort.pocitadlo",
+        "description": "bubblesort.pocitadlo",
+        "peekOfCode": "def max(seznam):\n    nej = -9999999999\n    for i in seznam:\n        if i > nej:\n            nej = i\n    return nej\ncelkem = sum(pocet.values())\nnejveci = max(pocet.values())\nfor k, p in pocet.items():\n    print(f\"{k}: {p:7d} {pocet[k] / celkem * 100:5.1f}% |{50*p//nejveci*'#'}\")",
+        "detail": "bubblesort.pocitadlo",
+        "documentation": {}
+    },
+    {
+        "label": "pocet",
+        "kind": 5,
+        "importPath": "bubblesort.pocitadlo",
+        "description": "bubblesort.pocitadlo",
+        "peekOfCode": "pocet = {}\nfor znak in ascii_uppercase:\n    pocet[znak] = 0\n# text = input(\"zadej text >\")\n# text = stdin.read()\n\"\"\"\nfor znak in text:\n    if znak in pocet:\n        pocet[znak] += 1\n    else:",
+        "detail": "bubblesort.pocitadlo",
+        "documentation": {}
+    },
+    {
+        "label": "celkem",
+        "kind": 5,
+        "importPath": "bubblesort.pocitadlo",
+        "description": "bubblesort.pocitadlo",
+        "peekOfCode": "celkem = 0\nwhile True:\n    znak = stdin.read(1) # čtení toho co napíšeme po jednom písmenu\n    if znak == \"\":\n        break\n    celkem += 1\n    znak = unicodedata.normalize(\"NFKD\", znak).encode(\"ascii\", \"ignore\").decode(\"ascii\")\n    znak = znak.upper()  # každý znak se převede na velké písmeno\n    if znak in pocet:\n        pocet[znak] += 1",
+        "detail": "bubblesort.pocitadlo",
+        "documentation": {}
+    },
+    {
+        "label": "celkem",
+        "kind": 5,
+        "importPath": "bubblesort.pocitadlo",
+        "description": "bubblesort.pocitadlo",
+        "peekOfCode": "celkem = sum(pocet.values())\nnejveci = max(pocet.values())\nfor k, p in pocet.items():\n    print(f\"{k}: {p:7d} {pocet[k] / celkem * 100:5.1f}% |{50*p//nejveci*'#'}\")",
+        "detail": "bubblesort.pocitadlo",
+        "documentation": {}
+    },
+    {
+        "label": "nejveci",
+        "kind": 5,
+        "importPath": "bubblesort.pocitadlo",
+        "description": "bubblesort.pocitadlo",
+        "peekOfCode": "nejveci = max(pocet.values())\nfor k, p in pocet.items():\n    print(f\"{k}: {p:7d} {pocet[k] / celkem * 100:5.1f}% |{50*p//nejveci*'#'}\")",
+        "detail": "bubblesort.pocitadlo",
+        "documentation": {}
+    },
+    {
+        "label": "adr",
+        "kind": 5,
+        "importPath": "soubory.write",
+        "description": "soubory.write",
+        "peekOfCode": "adr = path.dirname(__file__)\nfile_haldler = open(adr + \"/myfile.txt\", \"w\", -1,\"utf-8\")\nfile_haldler.write(\"Halo Word!\\n\")\nfile_haldler.write(\"Ahoj miláčku!\\n\")\nfile_haldler.close()\nwith open(\"yourfile.txt\", \"a\") as file_haldler:\n    c = ord(\"a\")\n    while chr(c) != \"z\":\n        file_haldler.write(chr(c))\n        c += 1",
+        "detail": "soubory.write",
+        "documentation": {}
+    },
+    {
+        "label": "file_haldler",
+        "kind": 5,
+        "importPath": "soubory.write",
+        "description": "soubory.write",
+        "peekOfCode": "file_haldler = open(adr + \"/myfile.txt\", \"w\", -1,\"utf-8\")\nfile_haldler.write(\"Halo Word!\\n\")\nfile_haldler.write(\"Ahoj miláčku!\\n\")\nfile_haldler.close()\nwith open(\"yourfile.txt\", \"a\") as file_haldler:\n    c = ord(\"a\")\n    while chr(c) != \"z\":\n        file_haldler.write(chr(c))\n        c += 1\nstdout.write(\"KOnec\\n\")",
+        "detail": "soubory.write",
+        "documentation": {}
+    }
+]
