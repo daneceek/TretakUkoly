@@ -1,9 +1,11 @@
 import unicodedata
+from sys import stdin
 
 alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" 
 
 def string_shift(text:str, key:int):
-    text = text.upper()
+    text = stdin.read()
+    print(text)
     text = unicodedata.normalize("NFKD", text).encode("ascii", "ignore").decode("ascii").upper() # odstranění znaků s háčkem atd. 
     result = ""
     for char in text:
