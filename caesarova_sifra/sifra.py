@@ -33,6 +33,7 @@ def folder_opening(input, output, shift):
     elif output == "-":
         with open(input, "r") as input:
             text = caesar(input.read(), shift)
+            stdout.write(text)
     else:
         with open(input, "r") as input:
             text = caesar(input.read(), shift)
