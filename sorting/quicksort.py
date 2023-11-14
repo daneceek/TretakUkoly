@@ -1,8 +1,9 @@
 from generator import get_random_list
 from copy import deepcopy
+import string
 
 
-seznam = get_random_list(10, 0,50)
+seznam = [15, 8, 11, 3, 5, 1, 18, 7, 16]
 print(seznam)
 def quicksort(seznam):
     
@@ -10,27 +11,26 @@ def quicksort(seznam):
     lower = []
     
     
-    if len(seznam) > 1 and seznam != False:
-        pivot = seznam[0]
+   
+    if len(seznam) <= 1:
+        return seznam
+    else:
         for i in range(1, len(seznam)):
-                if seznam[i] <= pivot:
-                    lower.append(seznam[i])
-                else:
-                    higher.append(seznam[i])
-        seznam.clear()
-        if len(lower) >= 1:
-            seznam.append(lower) 
-        seznam.append(pivot)
-        if len(higher) >= 1:
-            seznam.append(higher)
-        
+            pivot = seznam[0]
+            if seznam[i] <= pivot:
+                lower.append(seznam[i])
+            else:
+                higher.append(seznam[i])
+    
+    return quicksort(lower) + [pivot] + quicksort(higher)
+    
          
         
-        quicksort(higher)
+    
+    
         
-        quicksort(lower)
         
-        return seznam
+        
        
         
         
