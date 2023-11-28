@@ -17,17 +17,18 @@ import pyglet.window.mouse
 
 window = pyglet.window.Window(width=1500, height=800)
 batch = pyglet.graphics.Batch()  # pro optimalizované vyreslování objektů
-class Spaceobject(pyglet.sprite.Sprite):
+class Spaceobject():
     speed_x = 0 #rychlost ve směru osy x
     speed_y = 0
+    
     def __init__(self, image_path, speed_x=0, speed_y=0, batch = None, position_x=None, position_y=None):
         
         
         
         self.img = pyglet.image.load(image_path)
-        super().__init__(img=self.img, batch = batch)
-        self.img.anchor_x = self.img.width // 2
-        self.img.anchor_y = self.img.height // 2
+        # super().__init__(img=self.img, batch = batch)
+        # self.img.anchor_x = self.img.width // 2
+        # self.img.anchor_y = self.img.height // 2
 
         self.sprite = pyglet.sprite.Sprite(self.img, batch = batch)
         self.speed_x = speed_x
@@ -37,20 +38,30 @@ class Spaceobject(pyglet.sprite.Sprite):
     def move(self, dt:float):
         self.sprite.x += self.speed_x * dt * 10
         self.sprite.y += self.speed_y * dt * 10
-
-
+    
+        
 class Meteor(Spaceobject):
-    speed_x = 500
-    speed_y = 500
-    def __init__(self, position_x, position_y, batch):
-        super().__init__(image_path = "img/meteorBrown_big1.png", position_x=position_x, position_y=position_y, batch = batch) #zavolej toho předka 
+    
+    def __init__(self, speed_x, speed_y, position_x, position_y, batch):
+        self.speed_x = speed_x
+        self.speed_y = speed_y
+        super().__init__(image_path = "img/meteorBrown_big1.png", speed_x= self.speed_x,speed_y=self.speed_y,  position_x=position_x, position_y=position_y, batch = batch) #zavolej toho předka 
         
 
+class Bubble(Spaceobject):
+    
+    def __init__(self, speed_x, speed_y, position_x, position_y, batch):
+        self.speed_x = speed_x
+        self.speed_y = speed_y
+        super().__init__(image_path = "img/bubble.png", speed_x= self.speed_x,speed_y=self.speed_y,  position_x=position_x, position_y=position_y, batch = batch)
 
+meteor1 = Meteor(random.randint(0,20), random.randint(0,20),500, 600, batch)
+meteor2 = Meteor(random.randint(0,20), random.randint(0,20), 120, 600, batch)
+meteor3 = Meteor(random.randint(0,20), random.randint(0,20), 500, 100, batch)
 
-meteor1 = Meteor(position_x=500, position_y=600, batch=batch)
-meteor2 = Meteor(position_x=120, position_y=600, batch=batch)
-meteor3 = Meteor(position_x=500, position_y=100, batch=batch)
+bubble1 = Bubble(random.randint(0,20), random.randint(0,20), 500, 100, batch)
+bubble2 = Bubble(random.randint(0,20), random.randint(0,20), 120, 308, batch)
+bubble3 = Bubble(random.randint(0,20), random.randint(0,20), 700, 200, batch)
 # bubble = Spaceobject("img/bubble.png", 4, 8)
 # bubble2 = Spaceobject("img/meteorGrey_med2.png", 8, 16)
 # objekty = []
@@ -83,7 +94,13 @@ def on_mouse_press(x, y, button, mod):
 
 
 def tick(dt):
-    pass
+    meteor1.move(dt)
+    meteor2.move(dt)
+    meteor3.move(dt)
+    
+    bubble1.move(dt)
+    bubble2.move(dt)
+    bubble3.move(dt)
     # bubble.move(dt)
     # meteor1.move(dt)
     # bubble.move(dt)
