@@ -29,7 +29,7 @@ class Spaceobject():
         # super().__init__(img=self.img, batch = batch)
         # self.img.anchor_x = self.img.width // 2
         # self.img.anchor_y = self.img.height // 2
-
+        
         self.sprite = pyglet.sprite.Sprite(self.img, batch = batch)
         self.speed_x = random.randint(0,10)
         self.speed_y = random.randint(0, 10)
@@ -45,6 +45,7 @@ class Meteor(Spaceobject):
     def __init__(self, speed_x, speed_y, position_x, position_y, batch ,image_path="img/meteorBrown_big1.png", speed_koef=None):
         self.speed_x = speed_x
         self.speed_y = speed_y
+        self.speed_koef = speed_koef
         super().__init__(image_path, speed_x= self.speed_x,speed_y=self.speed_y,  position_x=position_x, position_y=position_y, batch = batch, speed_koef=self.speed_koef) #zavolej toho předka 
         
 
@@ -53,7 +54,8 @@ class GreyMeteor(Meteor):
     def __init__(self,position_x, position_y, batch):
         self.speed_x = random.choice([-20,20])
         self.speed_y = random.choice([-20,20])
-        super().__init__(image_path = "img/meteorGrey_big1.png", speed_x= self.speed_x,speed_y=self.speed_y,  position_x=position_x, position_y=position_y, batch = batch)
+        
+        super().__init__(image_path = "img/meteorGrey_big1.png", speed_x= self.speed_x,speed_y=self.speed_y,  position_x=position_x, position_y=position_y, batch = batch, speed_koef=self.speed_koef)
 
 class BrownMeteor(Meteor):
     speed_koef = 1
