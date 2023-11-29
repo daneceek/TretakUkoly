@@ -21,9 +21,9 @@ class Spaceobject():
     speed_x = 0 #rychlost ve směru osy x
     speed_y = 0
     
-    def __init__(self, image_path, speed_x=0, speed_y=0, batch = None, position_x=None, position_y=None):
+    def __init__(self, image_path, speed_x=0, speed_y=0, batch = None, position_x=None, position_y=None, speed_koef=None):
         
-        
+        self.speed_koef = speed_koef
         
         self.img = pyglet.image.load(image_path)
         # super().__init__(img=self.img, batch = batch)
@@ -31,37 +31,47 @@ class Spaceobject():
         # self.img.anchor_y = self.img.height // 2
 
         self.sprite = pyglet.sprite.Sprite(self.img, batch = batch)
-        self.speed_x = speed_x
-        self.speed_y = speed_y
+        self.speed_x = random.randint(0,10)
+        self.speed_y = random.randint(0, 10)
         self.sprite.x = position_x
         self.sprite.y = position_y
     def move(self, dt:float):
-        self.sprite.x += self.speed_x * dt * 10
-        self.sprite.y += self.speed_y * dt * 10
+        self.sprite.x += self.speed_x * dt * 10 * self.speed_koef
+        self.sprite.y += self.speed_y * dt * 10 * self.speed_koef
     
         
 class Meteor(Spaceobject):
     
-    def __init__(self, speed_x, speed_y, position_x, position_y, batch):
+    def __init__(self, speed_x, speed_y, position_x, position_y, batch ,image_path="img/meteorBrown_big1.png", speed_koef=None):
         self.speed_x = speed_x
         self.speed_y = speed_y
-        super().__init__(image_path = "img/meteorBrown_big1.png", speed_x= self.speed_x,speed_y=self.speed_y,  position_x=position_x, position_y=position_y, batch = batch) #zavolej toho předka 
+        super().__init__(image_path, speed_x= self.speed_x,speed_y=self.speed_y,  position_x=position_x, position_y=position_y, batch = batch, speed_koef=self.speed_koef) #zavolej toho předka 
         
 
-class Bubble(Spaceobject):
+class GreyMeteor(Meteor):
+    speed_koef = 2
+    def __init__(self,position_x, position_y, batch):
+        self.speed_x = random.choice([-20,20])
+        self.speed_y = random.choice([-20,20])
+        super().__init__(image_path = "img/meteorGrey_big1.png", speed_x= self.speed_x,speed_y=self.speed_y,  position_x=position_x, position_y=position_y, batch = batch)
+
+class BrownMeteor(Meteor):
+    speed_koef = 1
+    def __init__(self, position_x, position_y, batch):
+        self.speed_y = random.randint(-10,10)
+        self.speed_x = random.randint(-10,10)
     
-    def __init__(self, speed_x, speed_y, position_x, position_y, batch):
-        self.speed_x = speed_x
-        self.speed_y = speed_y
-        super().__init__(image_path = "img/bubble.png", speed_x= self.speed_x,speed_y=self.speed_y,  position_x=position_x, position_y=position_y, batch = batch)
+        super().__init__(image_path = "img/meteorBrown_big1.png", speed_x= self.speed_x,speed_y=self.speed_y,  position_x=position_x, position_y=position_y, batch = batch, speed_koef = self.speed_koef)
 
-meteor1 = Meteor(random.randint(0,20), random.randint(0,20),500, 600, batch)
-meteor2 = Meteor(random.randint(0,20), random.randint(0,20), 120, 600, batch)
-meteor3 = Meteor(random.randint(0,20), random.randint(0,20), 500, 100, batch)
 
-bubble1 = Bubble(random.randint(0,20), random.randint(0,20), 500, 100, batch)
-bubble2 = Bubble(random.randint(0,20), random.randint(0,20), 120, 308, batch)
-bubble3 = Bubble(random.randint(0,20), random.randint(0,20), 700, 200, batch)
+
+meteor1 = BrownMeteor(500, 600, batch)
+meteor2 = BrownMeteor(120, 600, batch)
+meteor3 = GreyMeteor(500, 100, batch)
+
+# bubble1 = Bubble(random.randint(0,20), random.randint(0,20), 500, 100, batch)
+# bubble2 = Bubble(random.randint(0,20), random.randint(0,20), 120, 308, batch)
+# bubble3 = Bubble(random.randint(0,20), random.randint(0,20), 700, 200, batch)
 # bubble = Spaceobject("img/bubble.png", 4, 8)
 # bubble2 = Spaceobject("img/meteorGrey_med2.png", 8, 16)
 # objekty = []
@@ -98,9 +108,9 @@ def tick(dt):
     meteor2.move(dt)
     meteor3.move(dt)
     
-    bubble1.move(dt)
-    bubble2.move(dt)
-    bubble3.move(dt)
+    # bubble1.move(dt)
+    # bubble2.move(dt)
+    # bubble3.move(dt)
     # bubble.move(dt)
     # meteor1.move(dt)
     # bubble.move(dt)
