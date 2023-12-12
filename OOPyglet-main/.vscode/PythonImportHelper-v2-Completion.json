@@ -49,25 +49,25 @@
         "kind": 6,
         "importPath": "start",
         "description": "start",
-        "peekOfCode": "class Spaceobject():\n    speed_x = 0 #rychlost ve směru osy x\n    speed_y = 0\n    def __init__(self, image_path, speed_x=0, speed_y=0, batch = None, position_x=None, position_y=None):\n        self.img = pyglet.image.load(image_path)\n        # super().__init__(img=self.img, batch = batch)\n        # self.img.anchor_x = self.img.width // 2\n        # self.img.anchor_y = self.img.height // 2\n        self.sprite = pyglet.sprite.Sprite(self.img, batch = batch)\n        self.speed_x = speed_x",
+        "peekOfCode": "class Spaceobject():\n    speed_x = 0 #rychlost ve směru osy x\n    speed_y = 0\n    speed_koef = 1\n    def __init__(self, image_path, speed_x=0, speed_y=0, batch = None, position_x=None, position_y=None, speed_koef=speed_koef):\n        self.speed_koef = speed_koef\n        self.img = pyglet.image.load(image_path)\n        # super().__init__(img=self.img, batch = batch)\n        # self.img.anchor_x = self.img.width // 2\n        # self.img.anchor_y = self.img.height // 2",
         "detail": "start",
         "documentation": {}
     },
     {
-        "label": "Meteor",
+        "label": "GreyMeteor",
         "kind": 6,
         "importPath": "start",
         "description": "start",
-        "peekOfCode": "class Meteor(Spaceobject):\n    def __init__(self, speed_x, speed_y, position_x, position_y, batch):\n        self.speed_x = speed_x\n        self.speed_y = speed_y\n        super().__init__(image_path = \"img/meteorBrown_big1.png\", speed_x= self.speed_x,speed_y=self.speed_y,  position_x=position_x, position_y=position_y, batch = batch) #zavolej toho předka \nclass Bubble(Spaceobject):\n    def __init__(self, speed_x, speed_y, position_x, position_y, batch):\n        self.speed_x = speed_x\n        self.speed_y = speed_y\n        super().__init__(image_path = \"img/bubble.png\", speed_x= self.speed_x,speed_y=self.speed_y,  position_x=position_x, position_y=position_y, batch = batch)",
+        "peekOfCode": "class GreyMeteor(Spaceobject):\n    def __init__(self,position_x, position_y, batch):\n        self.speed_x = random.randint(-10,10)\n        self.speed_y = random.randint(-10,10)\n        super().__init__(image_path = \"img/meteorGrey_big1.png\", speed_x= self.speed_x,speed_y=self.speed_y,  position_x=position_x, position_y=position_y, batch = batch, speed_koef=2)\nclass BrownMeteor(Spaceobject):\n    speed_koef = 1\n    def __init__(self, position_x, position_y, batch):\n        self.speed_y = random.randint(-10,10)\n        self.speed_x = random.randint(-10,10)",
         "detail": "start",
         "documentation": {}
     },
     {
-        "label": "Bubble",
+        "label": "BrownMeteor",
         "kind": 6,
         "importPath": "start",
         "description": "start",
-        "peekOfCode": "class Bubble(Spaceobject):\n    def __init__(self, speed_x, speed_y, position_x, position_y, batch):\n        self.speed_x = speed_x\n        self.speed_y = speed_y\n        super().__init__(image_path = \"img/bubble.png\", speed_x= self.speed_x,speed_y=self.speed_y,  position_x=position_x, position_y=position_y, batch = batch)\nmeteor1 = Meteor(random.randint(0,20), random.randint(0,20),500, 600, batch)\nmeteor2 = Meteor(random.randint(0,20), random.randint(0,20), 120, 600, batch)\nmeteor3 = Meteor(random.randint(0,20), random.randint(0,20), 500, 100, batch)\nbubble1 = Bubble(random.randint(0,20), random.randint(0,20), 500, 100, batch)\nbubble2 = Bubble(random.randint(0,20), random.randint(0,20), 120, 308, batch)",
+        "peekOfCode": "class BrownMeteor(Spaceobject):\n    speed_koef = 1\n    def __init__(self, position_x, position_y, batch):\n        self.speed_y = random.randint(-10,10)\n        self.speed_x = random.randint(-10,10)\n        super().__init__(image_path = \"img/meteorBrown_big1.png\", speed_x= self.speed_x,speed_y=self.speed_y,  position_x=position_x, position_y=position_y, batch = batch)\nmeteor1 = BrownMeteor(500, 600, batch)\nmeteor2 = BrownMeteor(120, 600, batch)\nmeteor3 = GreyMeteor(500, 100, batch)\n# bubble1 = Bubble(random.randint(0,20), random.randint(0,20), 500, 100, batch)",
         "detail": "start",
         "documentation": {}
     },
@@ -103,7 +103,7 @@
         "kind": 2,
         "importPath": "start",
         "description": "start",
-        "peekOfCode": "def on_mouse_press(x, y, button, mod):\n    print(x, y, button)\n    # bubble.x = x\n    # bubble.y = y\ndef tick(dt):\n    meteor1.move(dt)\n    meteor2.move(dt)\n    meteor3.move(dt)\n    bubble1.move(dt)\n    bubble2.move(dt)",
+        "peekOfCode": "def on_mouse_press(x, y, button, mod):\n    print(x, y, button)\n    # bubble.x = x\n    # bubble.y = y\ndef tick(dt):\n    meteor1.move(dt)\n    meteor2.move(dt)\n    meteor3.move(dt)\n    # bubble1.move(dt)\n    # bubble2.move(dt)",
         "detail": "start",
         "documentation": {}
     },
@@ -112,7 +112,7 @@
         "kind": 2,
         "importPath": "start",
         "description": "start",
-        "peekOfCode": "def tick(dt):\n    meteor1.move(dt)\n    meteor2.move(dt)\n    meteor3.move(dt)\n    bubble1.move(dt)\n    bubble2.move(dt)\n    bubble3.move(dt)\n    # bubble.move(dt)\n    # meteor1.move(dt)\n    # bubble.move(dt)",
+        "peekOfCode": "def tick(dt):\n    meteor1.move(dt)\n    meteor2.move(dt)\n    meteor3.move(dt)\n    # bubble1.move(dt)\n    # bubble2.move(dt)\n    # bubble3.move(dt)\n    # bubble.move(dt)\n    # meteor1.move(dt)\n    # bubble.move(dt)",
         "detail": "start",
         "documentation": {}
     },
@@ -121,7 +121,7 @@
         "kind": 5,
         "importPath": "start",
         "description": "start",
-        "peekOfCode": "window = pyglet.window.Window(width=1500, height=800)\nbatch = pyglet.graphics.Batch()  # pro optimalizované vyreslování objektů\nclass Spaceobject():\n    speed_x = 0 #rychlost ve směru osy x\n    speed_y = 0\n    def __init__(self, image_path, speed_x=0, speed_y=0, batch = None, position_x=None, position_y=None):\n        self.img = pyglet.image.load(image_path)\n        # super().__init__(img=self.img, batch = batch)\n        # self.img.anchor_x = self.img.width // 2\n        # self.img.anchor_y = self.img.height // 2",
+        "peekOfCode": "window = pyglet.window.Window(width=1500, height=800)\nbatch = pyglet.graphics.Batch()  # pro optimalizované vyreslování objektů\nclass Spaceobject():\n    speed_x = 0 #rychlost ve směru osy x\n    speed_y = 0\n    speed_koef = 1\n    def __init__(self, image_path, speed_x=0, speed_y=0, batch = None, position_x=None, position_y=None, speed_koef=speed_koef):\n        self.speed_koef = speed_koef\n        self.img = pyglet.image.load(image_path)\n        # super().__init__(img=self.img, batch = batch)",
         "detail": "start",
         "documentation": {}
     },
@@ -130,7 +130,7 @@
         "kind": 5,
         "importPath": "start",
         "description": "start",
-        "peekOfCode": "batch = pyglet.graphics.Batch()  # pro optimalizované vyreslování objektů\nclass Spaceobject():\n    speed_x = 0 #rychlost ve směru osy x\n    speed_y = 0\n    def __init__(self, image_path, speed_x=0, speed_y=0, batch = None, position_x=None, position_y=None):\n        self.img = pyglet.image.load(image_path)\n        # super().__init__(img=self.img, batch = batch)\n        # self.img.anchor_x = self.img.width // 2\n        # self.img.anchor_y = self.img.height // 2\n        self.sprite = pyglet.sprite.Sprite(self.img, batch = batch)",
+        "peekOfCode": "batch = pyglet.graphics.Batch()  # pro optimalizované vyreslování objektů\nclass Spaceobject():\n    speed_x = 0 #rychlost ve směru osy x\n    speed_y = 0\n    speed_koef = 1\n    def __init__(self, image_path, speed_x=0, speed_y=0, batch = None, position_x=None, position_y=None, speed_koef=speed_koef):\n        self.speed_koef = speed_koef\n        self.img = pyglet.image.load(image_path)\n        # super().__init__(img=self.img, batch = batch)\n        # self.img.anchor_x = self.img.width // 2",
         "detail": "start",
         "documentation": {}
     },
@@ -139,7 +139,7 @@
         "kind": 5,
         "importPath": "start",
         "description": "start",
-        "peekOfCode": "meteor1 = Meteor(random.randint(0,20), random.randint(0,20),500, 600, batch)\nmeteor2 = Meteor(random.randint(0,20), random.randint(0,20), 120, 600, batch)\nmeteor3 = Meteor(random.randint(0,20), random.randint(0,20), 500, 100, batch)\nbubble1 = Bubble(random.randint(0,20), random.randint(0,20), 500, 100, batch)\nbubble2 = Bubble(random.randint(0,20), random.randint(0,20), 120, 308, batch)\nbubble3 = Bubble(random.randint(0,20), random.randint(0,20), 700, 200, batch)\n# bubble = Spaceobject(\"img/bubble.png\", 4, 8)\n# bubble2 = Spaceobject(\"img/meteorGrey_med2.png\", 8, 16)\n# objekty = []\n# for _ in range(22):",
+        "peekOfCode": "meteor1 = BrownMeteor(500, 600, batch)\nmeteor2 = BrownMeteor(120, 600, batch)\nmeteor3 = GreyMeteor(500, 100, batch)\n# bubble1 = Bubble(random.randint(0,20), random.randint(0,20), 500, 100, batch)\n# bubble2 = Bubble(random.randint(0,20), random.randint(0,20), 120, 308, batch)\n# bubble3 = Bubble(random.randint(0,20), random.randint(0,20), 700, 200, batch)\n# bubble = Spaceobject(\"img/bubble.png\", 4, 8)\n# bubble2 = Spaceobject(\"img/meteorGrey_med2.png\", 8, 16)\n# objekty = []\n# for _ in range(22):",
         "detail": "start",
         "documentation": {}
     },
@@ -148,7 +148,7 @@
         "kind": 5,
         "importPath": "start",
         "description": "start",
-        "peekOfCode": "meteor2 = Meteor(random.randint(0,20), random.randint(0,20), 120, 600, batch)\nmeteor3 = Meteor(random.randint(0,20), random.randint(0,20), 500, 100, batch)\nbubble1 = Bubble(random.randint(0,20), random.randint(0,20), 500, 100, batch)\nbubble2 = Bubble(random.randint(0,20), random.randint(0,20), 120, 308, batch)\nbubble3 = Bubble(random.randint(0,20), random.randint(0,20), 700, 200, batch)\n# bubble = Spaceobject(\"img/bubble.png\", 4, 8)\n# bubble2 = Spaceobject(\"img/meteorGrey_med2.png\", 8, 16)\n# objekty = []\n# for _ in range(22):\n#     o = Spaceobject(random.choice(glob.glob(\"img/*.png\")), random.randint(0, 20), random.randint(0, 20))",
+        "peekOfCode": "meteor2 = BrownMeteor(120, 600, batch)\nmeteor3 = GreyMeteor(500, 100, batch)\n# bubble1 = Bubble(random.randint(0,20), random.randint(0,20), 500, 100, batch)\n# bubble2 = Bubble(random.randint(0,20), random.randint(0,20), 120, 308, batch)\n# bubble3 = Bubble(random.randint(0,20), random.randint(0,20), 700, 200, batch)\n# bubble = Spaceobject(\"img/bubble.png\", 4, 8)\n# bubble2 = Spaceobject(\"img/meteorGrey_med2.png\", 8, 16)\n# objekty = []\n# for _ in range(22):\n#     o = Spaceobject(random.choice(glob.glob(\"img/*.png\")), random.randint(0, 20), random.randint(0, 20))",
         "detail": "start",
         "documentation": {}
     },
@@ -157,34 +157,7 @@
         "kind": 5,
         "importPath": "start",
         "description": "start",
-        "peekOfCode": "meteor3 = Meteor(random.randint(0,20), random.randint(0,20), 500, 100, batch)\nbubble1 = Bubble(random.randint(0,20), random.randint(0,20), 500, 100, batch)\nbubble2 = Bubble(random.randint(0,20), random.randint(0,20), 120, 308, batch)\nbubble3 = Bubble(random.randint(0,20), random.randint(0,20), 700, 200, batch)\n# bubble = Spaceobject(\"img/bubble.png\", 4, 8)\n# bubble2 = Spaceobject(\"img/meteorGrey_med2.png\", 8, 16)\n# objekty = []\n# for _ in range(22):\n#     o = Spaceobject(random.choice(glob.glob(\"img/*.png\")), random.randint(0, 20), random.randint(0, 20))\n#     objekty.append(o)",
-        "detail": "start",
-        "documentation": {}
-    },
-    {
-        "label": "bubble1",
-        "kind": 5,
-        "importPath": "start",
-        "description": "start",
-        "peekOfCode": "bubble1 = Bubble(random.randint(0,20), random.randint(0,20), 500, 100, batch)\nbubble2 = Bubble(random.randint(0,20), random.randint(0,20), 120, 308, batch)\nbubble3 = Bubble(random.randint(0,20), random.randint(0,20), 700, 200, batch)\n# bubble = Spaceobject(\"img/bubble.png\", 4, 8)\n# bubble2 = Spaceobject(\"img/meteorGrey_med2.png\", 8, 16)\n# objekty = []\n# for _ in range(22):\n#     o = Spaceobject(random.choice(glob.glob(\"img/*.png\")), random.randint(0, 20), random.randint(0, 20))\n#     objekty.append(o)\n@window.event",
-        "detail": "start",
-        "documentation": {}
-    },
-    {
-        "label": "bubble2",
-        "kind": 5,
-        "importPath": "start",
-        "description": "start",
-        "peekOfCode": "bubble2 = Bubble(random.randint(0,20), random.randint(0,20), 120, 308, batch)\nbubble3 = Bubble(random.randint(0,20), random.randint(0,20), 700, 200, batch)\n# bubble = Spaceobject(\"img/bubble.png\", 4, 8)\n# bubble2 = Spaceobject(\"img/meteorGrey_med2.png\", 8, 16)\n# objekty = []\n# for _ in range(22):\n#     o = Spaceobject(random.choice(glob.glob(\"img/*.png\")), random.randint(0, 20), random.randint(0, 20))\n#     objekty.append(o)\n@window.event\ndef on_draw():",
-        "detail": "start",
-        "documentation": {}
-    },
-    {
-        "label": "bubble3",
-        "kind": 5,
-        "importPath": "start",
-        "description": "start",
-        "peekOfCode": "bubble3 = Bubble(random.randint(0,20), random.randint(0,20), 700, 200, batch)\n# bubble = Spaceobject(\"img/bubble.png\", 4, 8)\n# bubble2 = Spaceobject(\"img/meteorGrey_med2.png\", 8, 16)\n# objekty = []\n# for _ in range(22):\n#     o = Spaceobject(random.choice(glob.glob(\"img/*.png\")), random.randint(0, 20), random.randint(0, 20))\n#     objekty.append(o)\n@window.event\ndef on_draw():\n    window.clear()",
+        "peekOfCode": "meteor3 = GreyMeteor(500, 100, batch)\n# bubble1 = Bubble(random.randint(0,20), random.randint(0,20), 500, 100, batch)\n# bubble2 = Bubble(random.randint(0,20), random.randint(0,20), 120, 308, batch)\n# bubble3 = Bubble(random.randint(0,20), random.randint(0,20), 700, 200, batch)\n# bubble = Spaceobject(\"img/bubble.png\", 4, 8)\n# bubble2 = Spaceobject(\"img/meteorGrey_med2.png\", 8, 16)\n# objekty = []\n# for _ in range(22):\n#     o = Spaceobject(random.choice(glob.glob(\"img/*.png\")), random.randint(0, 20), random.randint(0, 20))\n#     objekty.append(o)",
         "detail": "start",
         "documentation": {}
     }

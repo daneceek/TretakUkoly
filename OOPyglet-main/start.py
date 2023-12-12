@@ -20,8 +20,9 @@ batch = pyglet.graphics.Batch()  # pro optimalizované vyreslování objektů
 class Spaceobject():
     speed_x = 0 #rychlost ve směru osy x
     speed_y = 0
+    speed_koef = 1
     
-    def __init__(self, image_path, speed_x=0, speed_y=0, batch = None, position_x=None, position_y=None, speed_koef=None):
+    def __init__(self, image_path, speed_x=0, speed_y=0, batch = None, position_x=None, position_y=None, speed_koef=speed_koef):
         
         self.speed_koef = speed_koef
         
@@ -31,8 +32,8 @@ class Spaceobject():
         # self.img.anchor_y = self.img.height // 2
         
         self.sprite = pyglet.sprite.Sprite(self.img, batch = batch)
-        self.speed_x = random.randint(0,10)
-        self.speed_y = random.randint(0, 10)
+        self.speed_x = speed_x
+        self.speed_y = speed_y
         self.sprite.x = position_x
         self.sprite.y = position_y
     def move(self, dt:float):
@@ -40,30 +41,31 @@ class Spaceobject():
         self.sprite.y += self.speed_y * dt * 10 * self.speed_koef
     
         
-class Meteor(Spaceobject):
+# class Meteor(Spaceobject):
     
-    def __init__(self, speed_x, speed_y, position_x, position_y, batch ,image_path="img/meteorBrown_big1.png", speed_koef=None):
-        self.speed_x = speed_x
-        self.speed_y = speed_y
-        self.speed_koef = speed_koef
-        super().__init__(image_path, speed_x= self.speed_x,speed_y=self.speed_y,  position_x=position_x, position_y=position_y, batch = batch, speed_koef=self.speed_koef) #zavolej toho předka 
+#     def __init__(self, speed_x, speed_y, position_x, position_y, batch ,image_path="img/meteorBrown_big1.png", speed_koef=None):
+#         self.speed_x = speed_x
+#         self.speed_y = speed_y
+#         self.speed_koef = speed_koef
+#         super().__init__(image_path, speed_x= self.speed_x,speed_y=self.speed_y,  position_x=position_x, position_y=position_y, batch = batch, speed_koef=self.speed_koef) #zavolej toho předka 
         
 
-class GreyMeteor(Meteor):
-    speed_koef = 2
+class GreyMeteor(Spaceobject):
+    
+    
     def __init__(self,position_x, position_y, batch):
-        self.speed_x = random.choice([-20,20])
-        self.speed_y = random.choice([-20,20])
         
-        super().__init__(image_path = "img/meteorGrey_big1.png", speed_x= self.speed_x,speed_y=self.speed_y,  position_x=position_x, position_y=position_y, batch = batch, speed_koef=self.speed_koef)
+        self.speed_x = random.randint(-10,10)
+        self.speed_y = random.randint(-10,10)
+        super().__init__(image_path = "img/meteorGrey_big1.png", speed_x= self.speed_x,speed_y=self.speed_y,  position_x=position_x, position_y=position_y, batch = batch, speed_koef=2)
 
-class BrownMeteor(Meteor):
+class BrownMeteor(Spaceobject):
     speed_koef = 1
     def __init__(self, position_x, position_y, batch):
         self.speed_y = random.randint(-10,10)
         self.speed_x = random.randint(-10,10)
     
-        super().__init__(image_path = "img/meteorBrown_big1.png", speed_x= self.speed_x,speed_y=self.speed_y,  position_x=position_x, position_y=position_y, batch = batch, speed_koef = self.speed_koef)
+        super().__init__(image_path = "img/meteorBrown_big1.png", speed_x= self.speed_x,speed_y=self.speed_y,  position_x=position_x, position_y=position_y, batch = batch)
 
 
 
